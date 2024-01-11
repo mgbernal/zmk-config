@@ -72,7 +72,7 @@
 			bindings = <
 	&tog GAME_LAYER   &ext_power EP_OFF    &ext_power EP_ON     &cp C_VOL_UP   &trans     &kp PSCRN                                                 &kp INS   &trans    &kp UP   &trans    &trans    &kp PG_UP   
 	&bt BT_SEL 0  &bt BT_SEL 1   &cp C_PREV &cp C_PLAY_PAUSE   &cp C_NEXT &trans                                                 &trans  &kp LEFT  &kp DOWN   &kp RIGHT  &trans    &kp PG_DN  
-	&bt BT_CLR    &out OUT_TOG    &trans     &cp C_VOL_DN   &trans     &kp F12    &trans    &trans         &trans    &trans    &trans  &trans    &trans     &trans    &kp HOME  &kp END 
+	&bt BT_CLR    &out OUT_TOG    &trans     &cp C_VOL_DN   &trans     &kp F20    &trans    &trans         &trans    &trans    &trans  &trans    &trans     &trans    &kp HOME  &kp END 
 	                               &trans       &kp ESC    &kp       &trans    &trans         &trans    &trans    &trans  &trans    &trans     
 			>; 
 		 };
