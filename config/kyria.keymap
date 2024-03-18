@@ -27,11 +27,22 @@
 //                      |         |  ESC  |      |       |      |            |      |      |      |       |       |
 
 
+#define MOUSE_LAYER 4
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |       |     |      | V UP    |       |      |                                         |      |       |   ↑   |     |       |  PGUP |
+// |       |     | Prev | PLAY    |  Next |      |                                         |      |   ←   |   ↓   |  →  |       |  PGDN |
+// |       |     |      | V DOWN  |       |      |       |      |            |      |      |      |       |       |     |  HOME |  END  |
+//                      |         |  ESC  |      |       |      |            |      |      |      |       |       |
+
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
+#include <dt-bindings/zmk/mouse.h>
+
+
 
 
 / {
@@ -47,11 +58,10 @@
         
 	
 	keymap {
-		compatible = "zmk,keymap";
-
+	
 		default_layer {
 			bindings = <
-	&gresc  &kp Q &kp W &kp E &kp R &kp T                                                               &kp Y         &kp U          &kp I    &kp O   &kp P    &kp BSLH
+	&gresc  &lt MOUSE_LAYER Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp BSLH
 	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &kp SEMI &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &mo LAYER_TEXT   &mt LC(C)  LC(V)  &kp DEL  &mo LAYER_TEXT &kp N         &kp M          &kp COMMA &kp DOT &kp FSLH &kp LCTRL 
 	               &kp LGUI &kp LBKT &mt LALT RBKT &mt LSHFT SPACE   &kp RET       	 &kp BSPC &mt RSHIFT SPACE   &mt RALT GRAVE &mo LAYER_NUMS &kp RGUI
@@ -84,6 +94,15 @@
 	                   &kp N1  &kp N2    &kp N3    &kp SPACE    &kp RET  &kp RET          &trans    &trans   &trans     &kp N0     
 			>;	
                  
+		};
+		mouse_layer {
+			bindings = <
+	&trans   &trans  &trans    &trans   &trans                                            &trans        &trans         &trans    &trans   &trans   &trans
+	&trans   &trans    &trans  &trans   &trans  &trans                                       &kp K_SCROLL_UP        &mkp LCLK         &mkp MCLK    &mkp RCLK   &trans &trans
+	&trans   &trans   &trans    &trans   &trans  &trans    &trans  &trans               	&trans  &trans &kp K_SCROLL_DOWN    &trans      &trans          &trans &trans &trans  
+						&trans &trans   &trans    &trans   &trans               &trans  &trans    &trans   &trans    &trans &trans    
+			>;	
+					
 		};
 	};
 };
