@@ -64,12 +64,11 @@
 		default_layer {
 			bindings = <
 	&gresc  &lt MOUSE_LAYER Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp BSLH
-	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &kp SEMI &kp SQT
+	&kp TAB  &mt LSHFT A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &mt RSHIFT  SEMI &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &mo LAYER_TEXT   &mt LC(C)  LC(V)  &kp DEL  &mo LAYER_TEXT &kp N         &kp M          &kp COMMA &kp DOT &kp FSLH &kp LCTRL 
-	               &kp LGUI &kp LBKT &mt LALT RBKT &mt LSHFT SPACE   &kp RET       	 &kp BSPC &mt RSHIFT SPACE   &mt RALT GRAVE &mo LAYER_NUMS &kp RGUI
+	               &kp LGUI &kp LBKT &mt LALT RBKT &kp SPACE   &kp RET       	 &kp BSPC &kp SPACE   &mt RALT GRAVE &mo LAYER_NUMS &kp RGUI
 			>;
 		};
-
 		nums_layer {
 			bindings = <
 	&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                           &kp N6  &kp N7  &kp N8    &kp N9   &kp N0    &kp MINUS  
@@ -100,8 +99,8 @@
 		mouse_layer {
 			bindings = <
 	&trans   &to DEFAULT  &trans    &trans   &trans    &trans                                         &trans        &trans         &trans    &trans   &trans   &trans
-	&trans   &trans    &trans  &trans   &trans  &trans                                       &kp K_SCROLL_UP        &mkp LCLK         &mkp MCLK    &mkp RCLK   &trans &trans
-	&trans   &trans   &trans    &trans   &trans  &trans    &trans  &trans               	&trans  &trans &kp K_SCROLL_DOWN    &trans      &trans          &trans &trans &trans  
+	&trans   &trans    &trans  &trans   &trans  &trans                                       &kp C_AC_SCROLL_UP        &mkp LCLK         &mkp MCLK    &mkp RCLK   &trans &trans
+	&trans   &trans   &trans    &trans   &trans  &trans    &trans  &trans               	&trans  &trans &kp C_AC_SCROLL_DOWN    &trans      &trans          &trans &trans &trans  
 						&trans &trans   &trans    &trans   &trans               &trans  &trans    &trans   &trans    &trans     
 			>;	
 					
