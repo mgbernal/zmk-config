@@ -100,7 +100,7 @@
 	&trans   &trans  &trans    &trans   &trans                                            &trans        &trans         &trans    &trans   &trans   &trans
 	&trans   &trans    &trans  &trans   &trans  &trans                                       &kp K_SCROLL_UP        &mkp LCLK         &mkp MCLK    &mkp RCLK   &trans &trans
 	&trans   &trans   &trans    &trans   &trans  &trans    &trans  &trans               	&trans  &trans &kp K_SCROLL_DOWN    &trans      &trans          &trans &trans &trans  
-						&trans &trans   &trans    &trans   &trans               &trans  &trans    &trans   &trans    &trans &trans    
+						&trans &trans   &trans    &trans   &trans               &trans  &trans    &trans   &trans    &trans     
 			>;	
 					
 		};
