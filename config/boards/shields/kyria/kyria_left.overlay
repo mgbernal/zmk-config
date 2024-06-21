@@ -22,3 +22,64 @@
 &left_encoder {
     status = "okay";
 };
+
+
+/ {
+	//pd0: virtual_input_0 {
+	//	compatible = "zmk,virtual-input";
+	//};
+	//pd1: virtual_input_1 {
+	//	compatible = "zmk,virtual-input";
+	//};
+	// tball0: virtual_input_tb_1 {
+	// 	compatible = "zmk,virtual-input";
+	// };
+	tball1: virtual_input_tb_2 {
+		compatible = "zmk,virtual-input";
+	};
+	//tpoint0: virtual_input_tp {
+	//	compatible = "zmk,virtual-input";
+	//};
+	//tpad0: virtual_input_gp {
+	//	compatible = "zmk,virtual-input";
+	//};
+	// input_relay_config_102 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <102>;
+	// 	device = <&pd1>;
+	 //};
+	//input_relay_config_103 {
+	//	compatible = "zmk,split-peripheral-input-relay";
+	//	relay-channel = <103>;
+	//	device = <&tball0>;
+	//};
+	 input_relay_config_104 {
+	 	compatible = "zmk,split-peripheral-input-relay";
+	 	relay-channel = <104>;
+	 	device = <&tball1>;
+	 };
+	// input_relay_config_105 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <105>;
+	// 	device = <&tpoint0>;
+	// };
+	// input_relay_config_106 {
+	// 	compatible = "zmk,split-peripheral-input-relay";
+	// 	relay-channel = <106>;
+	// 	device = <&tpad0>;
+	// };
+
+};
+
+#define INPUT_EV_KEY 0x01               /**< Key event */
+#define INPUT_EV_REL 0x02               /**< Relative coordinate event */
+#define INPUT_EV_ABS 0x03               /**< Absolute coordinate event */
+#define INPUT_EV_MSC 0x04               /**< Miscellaneous event */
+#define INPUT_EV_VENDOR_START 0xf0      /**< Vendor specific event start */
+#define INPUT_EV_VENDOR_STOP 0xff       /**< Vendor specific event stop */
+
+#define INPUT_REL_X 0x00                /**< Relative X coordinate */
+#define INPUT_REL_Y 0x01                /**< Relative Y coordinate */
+#define INPUT_REL_WHEEL 0x08            /**< Relative wheel coordinate */
+#define INPUT_REL_HWHEEL 0x06           /**< Relative horizontal wheel coordinate */
+#define INPUT_REL_MISC 0x09             /**< Relative misc coordinate */
