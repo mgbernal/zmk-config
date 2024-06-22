@@ -7,9 +7,10 @@ requires: [pro_micro]
 exposes: [i2c_oled]
 features:
   - keys
+  - pointer
   - display
   - encoder
   - underglow
 siblings:
   - kyria_left
-  - kyria_right
+  # - kyria_right
