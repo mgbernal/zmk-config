@@ -2,7 +2,7 @@
 if SHIELD_KYRIA_LEFT 
 
 config ZMK_KEYBOARD_NAME
-    default "KyriaTrackball"
+    default "Kyria"
 
 config ZMK_SPLIT_ROLE_CENTRAL
     default y
