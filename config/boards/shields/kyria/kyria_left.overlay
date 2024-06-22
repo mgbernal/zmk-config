@@ -19,10 +19,6 @@
         ;
 };
 
-&left_encoder {
-    status = "okay";
-};
-
 
 &pinctrl {
     spi0_default: spi0_default {
@@ -60,4 +56,8 @@
         scroll-layers = <1>; // optional indexes of drag scroll layers
         snipe-layers = <>; // optional indexes of snipe/precision layers
     };
-};d
+};
+
+&left_encoder {
+    status = "okay";
+};
