@@ -17,3 +17,5 @@ include:
     shield: kyria_left
   - board: nice_nano@1//zmk
     shield: kyria_right
+  - board: nice_nano@1//zmk
+    shield: settings_reset
