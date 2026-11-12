@@ -152,7 +152,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ## Sprint 3 — Atajos de trabajo (reuniones, notas, herdr)
 **Objetivo:** que cualquier atajo de varias teclas se haga con la capa TEXT y una sola tecla.
-**Estado sprint:** 0/3 cerrados
+**Estado sprint:** 0/4 cerrados
 
 ### #9 Atajos de Windows de una tecla en la capa TEXT
 - **Sprint:** 3
@@ -195,14 +195,60 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
 
-### #11 Atajos para herdr y `mma`
+### #11 Capa HERDR: cada acción con una sola tecla
 - **Sprint:** 3
-- **Estado:** 🔴 BLOQUEADO — falta saber qué es `mma` y qué prefijo usa herdr
-- **Valor:** medio · **Coste:** M
-- **Descripción:** macros de una tecla para el prefijo de herdr y sus acciones más frecuentes
-  (cambiar de panel o pestaña, `prefix+a` para el tablero) y lo equivalente para `mma`. La config
-  de herdr del VPS no redefine el prefijo, así que usa el de por defecto.
-- **Desbloqueo:** el usuario aclara qué es `mma` y qué acciones de herdr usa más.
+- **Estado:** 🟢 PENDIENTE — falta confirmar `keys.json` de herdr-app en el portátil (¿el prefijo
+  sigue siendo Ctrl+B?)
+- **Valor:** alto · **Coste:** M
+- **Datos (de la sesión `mma-e0`, 2026-11-12):** el uso diario es **herdr-app**, una ventana nativa
+  en Windows (la «cabina MMA») conectada a los agentes del VPS. El prefijo por defecto es
+  **Ctrl+B**: se pulsa, se suelta y luego va la tecla de la acción.
+- **Diseño:** capa nueva **HERDR** que se activa manteniendo el pulgar exterior derecho (posición
+  49, ahora RGUI y casi sin uso). La regla es sencilla: **HERDR + tecla = Ctrl+B y luego esa tecla**,
+  de modo que lo que ya sabes de herdr sigue valiendo, pero en un solo gesto. Cada tecla es una macro
+  `Ctrl+B, <tecla>`.
+  - Letras directas: `a` tablero · `c` nueva pestaña · `n`/`p` pestaña siguiente/anterior ·
+    `v` split vertical · `x` cerrar panel · `z` zoom · `h j k l` mover el foco entre paneles ·
+    `r` redimensionar · `w` workspaces · `g` goto · `b` barra lateral · `o` notificación ·
+    `e` scrollback · `s` ajustes · `q` detach · Tab/Shift+Tab panel siguiente/anterior
+  - Números 1…9 → pestaña N (en la fila de arriba de la capa)
+  - Con Shift (HERDR + Shift + letra): `T` renombrar pestaña · `X` cerrar pestaña · `N` nuevo
+    workspace · `W` renombrar workspace · `D` cerrar workspace · `G` nuevo worktree · `R` recargar
+    config · `P` renombrar panel. Hay que decidir si se hace con mod-morph o con teclas aparte.
+  - Split horizontal «-»: la macro manda la tecla **física** `FSLH`, porque con la distribución
+    española `MINUS` saca «'». Ayuda «?»: se manda `LS(MINUS)`.
+- **Cabina MMA (atajos propios de herdr-app, en la fila de arriba o en los pulgares de la capa):**
+  Alt+F1 cabina · Alt+F2 muro de agentes · Alt+F3 equipo · Alt+F5 métricas · Alt+Shift+C barra de
+  frentes · Alt+Shift+A barra de acciones · Alt+Shift+N navegar frentes · Ctrl+Shift+L alternar
+  muro/cabina. Ctrl+Alt+Shift+Esc (escape de emergencia) va en una posición difícil de pulsar sin
+  querer.
+- **Restricciones:**
+  - No usar acordes Ctrl+Alt+letra propios: en Windows AltGr = Ctrl+Alt y chocan con @ # € [ ] { }.
+  - Nunca generar Alt+F4 (cierra la ventana).
+  - herdr-bar (`herdr-bar.open`) no tiene atajo, y `prefix+k` choca con mover el foco arriba. Si se
+    quiere, hay que asignarlo antes en `keys.json` (propuesta: `prefix+space`) y después mapearlo.
+- **Subtareas:**
+  - [ ] El usuario confirma en el portátil el prefijo de `keys.json` de herdr-app
+  - [ ] Decidir el atajo de herdr-bar en `keys.json` (opcional)
+  - [ ] Implementar la capa HERDR con macros
+  - [ ] Añadirla al README y al dibujo del keymap (#14)
+- **Test plan:** en herdr-app, cada tecla de la capa hace su acción: split, cambiar de pestaña,
+  zoom, tablero, cabina con Alt+F1…
+- **Ficheros:** `config/kyria.keymap`
+- **Añadido:** 2026-11-12
+
+### #15 Macros de texto para mma
+- **Sprint:** 3
+- **Estado:** 🟢 PENDIENTE
+- **Valor:** medio · **Coste:** S
+- **Descripción:** `mma` (`~/mma`) es el espacio del asistente personal de gestión (Claude Code o
+  Copilot sobre un vault de Obsidian en el VPS). Macros que escriben los comandos más repetidos:
+  - `cd ~/mma && claude` + Enter (lo que más se repite). Ojo: «~» es una tecla muerta en español y
+    «&» es Shift+6, así que la macro tiene que usar las definiciones `ES_*` de #5.
+  - `frente ` (deja el cursor para escribir el número y la acción), `hc ls` + Enter
+  - `herdr-app do layout.switch --name mma-indra` + Enter (la variante Indra no tiene atajo)
+- **Dónde:** en la capa HERDR, en posiciones de la mano izquierda que no use herdr.
+- **Depende de:** #5
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
 
@@ -269,3 +315,6 @@ _(vacío)_
   usuario.
 - 2026-11-12 — Teams confirmado: #10 pasa de BLOQUEADO a PENDIENTE y se amplía a chats y archivos.
   #11 sigue bloqueado; se han pedido los datos de herdr y mma a la sesión `mma-e0`.
+- 2026-11-12 — `mma-e0` responde con los atajos de herdr y herdr-app. #11 se rediseña como capa
+  HERDR y deja de estar bloqueado (solo falta confirmar `keys.json`). Nuevo #15 para las macros de
+  texto de mma.
