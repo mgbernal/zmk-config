@@ -305,6 +305,9 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Combos** (por ejemplo J+K = Esc, o pulsar dos teclas a la vez para un atajo).
 - **Encoders, OLED o RGB:** solo si el hardware los tiene (`kyria.conf` los trae comentados).
 - **Repasar el modo juego** (capa 3).
+- **Trackball PMW3610 (futuro):** el teclado aún no lo lleva. La rama `origin/PWM3610Add` (jun-2024) fue
+  solo una prueba y queda de referencia. La capa MOUSE (#12) se diseña sin él, pero dejando sitio
+  para clics y scroll cuando llegue.
 - **Recolocar ç y º** (`BSLH` y `GRAVE` ocupan sitios buenos y se usan poco).
 
 ---
