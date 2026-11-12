@@ -299,6 +299,12 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ---
 
+### #16 Capa de acentos con AltGr ✅ HECHO (2026-11-12)
+- **Sprint:** 2 · **Valor:** alto · **Coste:** S
+- **Descripción:** el usuario prefiere poner los acentos con AltGr, como en EE. UU.-Internacional, pero sin cambiar Windows. Al mantener el pulgar º se abre la capa ACC (5): A E I O U dan á é í ó ú (macro ´ + vocal; con Shift salen Á É Í Ó Ú gracias a un mod-morph que quita el Shift de la ´), Y da ü, N da ñ y la tecla de - da ¿. Si se pulsa sin mantener, sale º. El pulgar deja de ser AltGr, pero los símbolos que lo necesitaban ya están en SYM.
+- **Prueba física:** «Canción, pingüino, ¿Ómnibus? Él añadió más.»
+- **Ficheros:** config/kyria.keymap
+
 ## 📅 Diferido
 
 - **Home row mods** (Ctrl, Alt, Win y Shift en la fila central): reducen las combinaciones, pero

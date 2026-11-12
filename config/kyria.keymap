@@ -5,7 +5,7 @@
 // | ESC  |  Q  |  W  |  E   |  R  |  T    |                                                      |    Y    |   U   |  I    |  O   |   P   | MUTE  |
 // | TAB  |  A  |  S  |  D   |  F  |  G    |                                                      |    H    |   J   |  K    |  L   | ñ(;)  | ´(') |
 // | CTRL |  Z  |  X  |  C   |  V  |  B    |  *TEXT        |  Pegar/[Copiar]|    |  DEL  |  *TEXT        |    N    |   M   |  ,    |  .   | -(/)  | CTRL |
-//                    | GUI  | *SYM | +[alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  º[altgr]| *NUMS | R-GUI |
+//                    | GUI  | *SYM | +[alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  º[ACC] | *NUMS | R-GUI |
 
 #define LAYER_NUMS 1 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -38,6 +38,14 @@
 // |       |  "  |  ¡  |  (   |  ¿  |  @   |                                        |  #  |   ?   |  )   |  !   |   '   |       |
 // |       |  \  |  `  |  *   |  =  |  &   |        |       |      |       |        |  /  |   _   |  +   |  ~   |   |   |       |
 //                     |      |[SYM] |      |        |       |      |       |        |     |       |      |
+
+#define LAYER_ACC 5
+// Acentos (mantener el pulgar º, el antiguo AltGr). Como AltGr en EE. UU.-Internacional,
+// pero con Windows en español: una pulsación por letra. Con Shift salen en mayúscula (Á, Ñ, Ü).
+// |       |     |      |  é   |     |      |                                        |  ü  |   ú   |  í   |  ó   |       |       |
+// |       |  á  |      |      |     |      |                                        |     |       |      |      |       |       |
+// |       |     |      |      |     |      |        |       |      |       |        |  ñ  |       |      |      |   ¿   |       |
+//                     |      |      |      |        |       |      |       |  [ACC] |     |       |      |
 
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
@@ -76,6 +84,16 @@
             require-prior-idle-ms = <125>;
             bindings = <&kp>, <&kp>;
         };
+
+        // Pulgar º: pulsado = º; mantenido + otra tecla = capa de acentos.
+        // balanced y sin require-prior-idle: así funciona en mitad de palabra ("canción").
+        acc: acc_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&mo>, <&kp>;
+        };
     };
         
 	
@@ -96,6 +114,117 @@
             #binding-cells = <0>;
             bindings = <&kp ES_DTIL &kp SPACE>;
         };
+
+        // Vocales con tilde: ´ + vocal. Con Shift, el mod-morph quita el Shift para la ´
+        // (si no, Shift+´ sería ¨) y lo pone solo en la vocal: Á É Í Ó Ú.
+        acc_a_lo: acc_a_lo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp A>;
+        };
+        acc_a_up: acc_a_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp LS(A)>;
+        };
+        acc_a: acc_a {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&acc_a_lo>, <&acc_a_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        acc_e_lo: acc_e_lo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp E>;
+        };
+        acc_e_up: acc_e_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp LS(E)>;
+        };
+        acc_e: acc_e {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&acc_e_lo>, <&acc_e_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        acc_i_lo: acc_i_lo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp I>;
+        };
+        acc_i_up: acc_i_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp LS(I)>;
+        };
+        acc_i: acc_i {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&acc_i_lo>, <&acc_i_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        acc_o_lo: acc_o_lo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp O>;
+        };
+        acc_o_up: acc_o_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp LS(O)>;
+        };
+        acc_o: acc_o {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&acc_o_lo>, <&acc_o_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        acc_u_lo: acc_u_lo {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp U>;
+        };
+        acc_u_up: acc_u_up {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp ES_ACUT &kp LS(U)>;
+        };
+        acc_u: acc_u {
+            compatible = "zmk,behavior-mod-morph";
+            #binding-cells = <0>;
+            bindings = <&acc_u_lo>, <&acc_u_up>;
+            mods = <(MOD_LSFT|MOD_RSFT)>;
+        };
+        // ü: ¨ (Shift+´) + u. Si se mantiene Shift, sale Ü.
+        acc_uml: acc_u_umlaut {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <5>;
+            tap-ms = <5>;
+            bindings = <&kp LS(ES_ACUT) &kp U>;
+        };
     };
 
 	keymap {
@@ -107,7 +236,7 @@
 	&gresc  &kp Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp LG(LA(K))
 	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &kp SEMI &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &mo LAYER_TEXT   &mt LC(C)  LC(V)  &kp DEL  &mo LAYER_TEXT &kp N         &kp M          &kp COMMA &kp DOT &kp FSLH &kp LCTRL 
-	               &kp LGUI &mo LAYER_SYM &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &smt RALT GRAVE &mo LAYER_NUMS &kp RGUI
+	               &kp LGUI &mo LAYER_SYM &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &acc LAYER_ACC GRAVE &mo LAYER_NUMS &kp RGUI
 			>;
 		};
 
@@ -144,6 +273,14 @@
 	&trans   &kp ES_DQUO &kp ES_IEXL &kp ES_LPAR &kp ES_IQUE &kp ES_AT                                       &kp ES_HASH &kp ES_QUES &kp ES_RPAR &kp ES_EXCL &kp ES_APOS &trans
 	&trans   &kp ES_BSLH &es_grv     &kp ES_STAR &kp ES_EQL  &kp ES_AMPS  &trans  &trans    &trans  &trans  &kp ES_SLSH &kp ES_UNDS &kp ES_PLUS &es_tild    &kp ES_PIPE &trans
 	                     &trans      &trans      &trans      &trans       &trans            &trans  &trans  &trans      &trans      &trans
+			>;
+		};
+		acc_layer {
+			bindings = <
+	&trans        &trans        &trans        &acc_e        &trans        &trans        &acc_uml      &acc_u        &acc_i        &acc_o        &trans        &trans
+	&trans        &acc_a        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
+	&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &kp ES_NTIL   &trans        &trans        &trans        &kp ES_IQUE   &trans
+	&trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans        &trans
 			>;
 		};
 	};
