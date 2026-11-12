@@ -12,7 +12,7 @@ Leyenda: 🟢 PENDIENTE · 🟡 EN CURSO · 🔴 BLOQUEADO · ✅ HECHO
   códigos de posición US, así que cada tecla produce lo que imprime en esa posición un teclado
   español: `SEMI`→ñ, `SQT`→´ (tecla muerta), `MINUS`→', `EQUAL`→¡, `FSLH`→-, `LBKT`→` (muerta),
   `RBKT`→+, `BSLH`→ç, `GRAVE`→º, `NON_US_BSLH`→<. Los símbolos con AltGr van con `RA(...)`.
-- Sistema operativo supuesto: **Windows** (por Win+Espacio). App de reuniones supuesta: **Teams**.
+- Sistema operativo supuesto: **Windows** (por Win+Espacio). **Microsoft Teams** (confirmado) para reuniones, chats y archivos.
 - Uso diario: reuniones, toma de notas, trabajo con `mma` (por aclarar) y `herdr`.
 - Molestias: combinaciones complejas (Win+Espacio) y los símbolos.
 - Verificación: no hay toolchain local, así que cada cambio se valida con el script de #4 y con la
@@ -169,14 +169,29 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
 
-### #10 Atajos de reuniones
+### #10 Atajos de Microsoft Teams (reuniones, chats y archivos)
 - **Sprint:** 3
-- **Estado:** 🔴 BLOQUEADO — falta confirmar qué app de reuniones se usa
-- **Valor:** alto · **Coste:** S
-- **Descripción:** si es Teams: micro Ctrl+Shift+M, cámara Ctrl+Shift+O, levantar la mano
-  Ctrl+Shift+K y colgar Ctrl+Shift+H. Se agrupan junto a F20 (silenciar micro, ya existe en la
-  posición 29).
-- **Desbloqueo:** el usuario confirma la app y cómo funciona hoy F20 (¿PowerToys?).
+- **Estado:** 🟢 PENDIENTE — Teams confirmado el 2026-11-12; falta saber cómo funciona hoy F20
+- **Valor:** alto · **Coste:** M
+- **Descripción:** Teams es la herramienta corporativa principal: reuniones, chats y archivos. Se
+  agrupan sus atajos en la mano izquierda de la capa TEXT, junto a F20 (posición 29):
+  - **Reunión:** micro Ctrl+Shift+M · cámara Ctrl+Shift+O · levantar la mano Ctrl+Shift+K ·
+    compartir pantalla Ctrl+Shift+E · colgar Ctrl+Shift+H · aceptar llamada Ctrl+Shift+A ·
+    rechazarla Ctrl+Shift+D
+  - **Navegación:** buscar Ctrl+E · chat nuevo Ctrl+N · Ctrl+1…6 para Actividad, Chat, Teams,
+    Calendario, Llamadas y Archivos (el orden depende de cómo esté anclada la barra lateral, hay que
+    comprobarlo)
+  - **Escribir:** abrir el cuadro de redacción grande Ctrl+Shift+X (útil para notas largas en un
+    chat)
+- **Nota:** los atajos Ctrl+Shift+… solo funcionan con la ventana de Teams activa. El micro global
+  queda en F20; hay que confirmar qué lo gestiona (¿PowerToys u otra herramienta?) para no duplicar.
+- **Subtareas:**
+  - [ ] Comprobar el orden de Ctrl+1…6 en el Teams del usuario
+  - [ ] Confirmar qué hace F20 hoy
+  - [ ] Proponer la colocación y validarla con el usuario
+  - [ ] Implementar
+- **Test plan:** en una reunión de prueba, cada tecla hace su acción; en el chat, buscar y crear
+  chat nuevo.
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
 
@@ -252,3 +267,5 @@ _(vacío)_
 
 - 2026-11-12 — Backlog inicial, creado a partir de la revisión del repo y de la conversación con el
   usuario.
+- 2026-11-12 — Teams confirmado: #10 pasa de BLOQUEADO a PENDIENTE y se amplía a chats y archivos.
+  #11 sigue bloqueado; se han pedido los datos de herdr y mma a la sesión `mma-e0`.
