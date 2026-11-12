@@ -33,6 +33,7 @@ scripts/check_keymap.py  validación rápida del keymap, sin compilar
 .githooks/pre-commit     ejecuta check_keymap.py antes de cada commit
 docs/sprints/backlog.md  backlog de cambios y su estado
 docs/procedimientos.md   cómo trabajar con GitHub, flashear y volver atrás
+docs/manual-kyria.pdf    manual imprimible (A4 apaisado); se regenera con scripts/manual/generar.sh
 ```
 
 ## Uso rápido

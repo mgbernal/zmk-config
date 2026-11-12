@@ -1,0 +1,90 @@
+@font-face { font-family: "Chakra"; src: url("fonts/ChakraPetch-Medium.ttf"); font-weight: 500; }
+@font-face { font-family: "Chakra"; src: url("fonts/ChakraPetch-SemiBold.ttf"); font-weight: 600; }
+@font-face { font-family: "Chakra"; src: url("fonts/ChakraPetch-Bold.ttf"); font-weight: 700; }
+@font-face { font-family: "JBM"; src: url("fonts/JetBrainsMono.ttf"); font-weight: 100 800; }
+
+@page { size: A4 landscape; margin: 0; }
+:root {
+  --ink: #004254; --ink2: #004859; --teal: #006F77; --cyan: #00B0BD; --line: #72D3D3;
+  --mint: #B1EFE8; --canvas: #E3E2DA; --red: #84270B; --green: #246B4E; --violet: #534199;
+}
+* { box-sizing: border-box; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+html, body { margin: 0; background: #fff; color: var(--ink); font-family: "Liberation Sans", Arial, sans-serif; }
+.page {
+  width: 297mm; height: 210mm; position: relative; overflow: hidden; page-break-after: always;
+  padding: 9mm 11mm 8mm; display: flex; flex-direction: column; gap: 3mm;
+  background:
+    linear-gradient(rgba(0,111,119,.045) 1px, transparent 1px) 0 0 / 5mm 5mm,
+    linear-gradient(90deg, rgba(0,111,119,.045) 1px, transparent 1px) 0 0 / 5mm 5mm, #fff;
+}
+.page:last-child { page-break-after: auto; }
+.br { position: absolute; width: 7mm; height: 7mm; border: 0 solid var(--teal); }
+.br.tl { top: 4mm; left: 4mm; border-top-width: .6mm; border-left-width: .6mm; }
+.br.tr { top: 4mm; right: 4mm; border-top-width: .6mm; border-right-width: .6mm; }
+.br.bl { bottom: 4mm; left: 4mm; border-bottom-width: .6mm; border-left-width: .6mm; }
+.br.brr { bottom: 4mm; right: 4mm; border-bottom-width: .6mm; border-right-width: .6mm; }
+
+.topbar {
+  display: flex; align-items: center; gap: 6mm; padding: 2mm 4mm; background: var(--ink); color: #fff;
+  font-family: "JBM", monospace; font-size: 8.5pt; letter-spacing: .08em;
+  clip-path: polygon(0 0, calc(100% - 4mm) 0, 100% 4mm, 100% 100%, 0 100%);
+}
+.topbar .brand { font-family: "Chakra"; font-weight: 700; font-size: 12pt; letter-spacing: .12em; }
+.topbar .brand b { color: var(--cyan); margin: 0 1mm; }
+.topbar .sec { color: var(--mint); }
+.topbar .ref { margin-left: auto; opacity: .75; }
+.body { flex: 1; display: flex; flex-direction: column; gap: 3mm; min-height: 0; }
+.foot { display: flex; align-items: center; gap: 4mm; font-family: "JBM"; font-size: 7pt; letter-spacing: .1em; color: var(--teal); }
+.foot .stripe { flex: 1; height: 2mm; background: repeating-linear-gradient(-45deg, var(--line) 0 1.2mm, transparent 1.2mm 3mm); }
+
+.panel { position: relative; flex: 1; display: flex; flex-direction: column; min-height: 0;
+  border: .35mm solid var(--line); background: rgba(255,255,255,.92); padding: 2.5mm 4mm 2mm;
+  clip-path: polygon(0 0, calc(100% - 5mm) 0, 100% 5mm, 100% 100%, 5mm 100%, 0 calc(100% - 5mm)); }
+.ph { display: flex; align-items: baseline; gap: 4mm; }
+.code { font-family: "JBM"; font-weight: 700; font-size: 8pt; color: #fff; background: var(--teal); padding: .6mm 2mm; letter-spacing: .1em; }
+.ph h2 { margin: 0; font-family: "Chakra"; font-weight: 700; font-size: 17pt; text-transform: uppercase; letter-spacing: .04em; }
+.how { margin-left: auto; font-family: "JBM"; font-size: 8.5pt; color: var(--teal); text-transform: uppercase; letter-spacing: .06em; }
+.desc { margin: 1mm 0 0; font-size: 9pt; color: var(--ink2); }
+.board { flex: 1; min-height: 0; width: 100%; display: block; margin: 1mm auto 0; }
+.board .lbl { font-family: "Chakra"; font-weight: 600; text-anchor: middle; }
+.board .hint { font-family: "JBM"; font-weight: 600; text-anchor: middle; letter-spacing: .02em; opacity: .85; }
+.board .ghost { font-family: "Chakra"; font-weight: 500; text-anchor: middle; fill: #B9B8AE; }
+.callout { font-size: 8.8pt; padding: 1.6mm 3mm; background: var(--canvas); border-left: 1.2mm solid var(--teal); }
+code { font-family: "JBM"; font-size: .92em; background: rgba(177,239,232,.55); padding: 0 1mm; }
+
+.hero { display: grid; grid-template-columns: 1fr 1.55fr; gap: 6mm; align-items: center; }
+.kicker { font-family: "JBM"; font-size: 8pt; letter-spacing: .14em; color: var(--teal); }
+.hero h1 { margin: 0; font-family: "Chakra"; font-weight: 700; font-size: 40pt; line-height: .95; text-transform: uppercase; letter-spacing: .02em; }
+.hero h1 span { color: var(--cyan); }
+.lede { margin: 1.5mm 0 0; font-size: 9.5pt; line-height: 1.35; }
+.rules { display: grid; grid-template-columns: repeat(3, 1fr); gap: 3mm; }
+.rule { display: flex; gap: 2mm; font-size: 8.6pt; line-height: 1.32; padding: 2mm; border: .3mm solid var(--line); background: #fff;
+  clip-path: polygon(0 0, calc(100% - 3mm) 0, 100% 3mm, 100% 100%, 0 100%); }
+.rule .n { font-family: "Chakra"; font-weight: 700; font-size: 15pt; color: var(--cyan); line-height: 1; }
+.thumbs { display: grid; grid-template-columns: 1fr 1fr .9fr; gap: 3mm; }
+.th { font-family: "JBM"; font-size: 7pt; letter-spacing: .12em; color: var(--teal); margin-bottom: .8mm; }
+.thumbs table { width: 100%; border-collapse: collapse; }
+.thumbs td { border: .3mm solid var(--line); text-align: center; font-family: "Chakra"; font-weight: 600; font-size: 9pt; padding: 1mm .5mm; background: #fff; }
+.thumbs td small { display: block; font-family: "JBM"; font-weight: 600; font-size: 6pt; color: var(--teal); text-transform: uppercase; }
+.legend { display: flex; flex-wrap: wrap; gap: 2mm 5mm; font-size: 7.6pt; color: var(--ink2); }
+.legend i { display: inline-block; width: 3.4mm; height: 3.4mm; border: .35mm solid var(--ink); vertical-align: -.7mm; margin-right: 1.2mm; }
+.legend i.dash { border: .35mm dashed #B9B8AE; background: none; }
+
+.grid4 { display: grid; grid-template-columns: 1fr 1fr; grid-template-rows: 1fr 1fr; gap: 4mm; flex: 1; }
+.box { border: .35mm solid var(--line); background: rgba(255,255,255,.94); padding: 3mm 5mm;
+  clip-path: polygon(0 0, calc(100% - 5mm) 0, 100% 5mm, 100% 100%, 0 100%); font-size: 10.5pt; line-height: 1.5; }
+.bh { display: flex; align-items: center; gap: 3mm; margin-bottom: 1.5mm; }
+.bh h3 { margin: 0; font-family: "Chakra"; font-weight: 700; font-size: 13pt; text-transform: uppercase; }
+.box ol, .box ul { margin: 0; padding-left: 5mm; display: grid; gap: 1.2mm; }
+.box ul.check { list-style: none; padding-left: 0; }
+.box ul.check li::before { content: "☐"; color: var(--teal); margin-right: 2mm; font-size: 11pt; }
+.note { margin: 2mm 0 0; font-size: 8.5pt; color: var(--teal); }
+.combo { width: 100%; border-collapse: collapse; }
+.combo td { padding: 1.1mm 1.5mm; border-bottom: .25mm solid var(--line); }
+.combo td:first-child { font-family: "Chakra"; font-weight: 600; width: 34%; }
+.status { display: flex; flex-wrap: wrap; align-items: center; gap: 2mm 5mm; padding: 2.5mm 4mm; background: var(--canvas);
+  font-family: "JBM"; font-size: 8pt; letter-spacing: .04em; }
+.status .sh { font-weight: 700; color: var(--ink); letter-spacing: .14em; }
+.status .ok { color: var(--green); font-weight: 700; }
+.status .dev { color: var(--red); }
+.status .links { width: 100%; color: var(--ink2); }

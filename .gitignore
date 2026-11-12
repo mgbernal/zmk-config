@@ -9,3 +9,5 @@ zephyr/
 modules/
 # Python
 __pycache__/
+scripts/manual/fonts/
+scripts/manual/manual.html
