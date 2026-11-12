@@ -269,7 +269,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Sprint:** 4
 - **Estado:** 🟢 PENDIENTE
 - **Valor:** medio · **Coste:** M
-- **Descripción:** ahora mismo no hay ninguna tecla que active la capa 4. Además usa
+- **Descripción:** ahora mismo no hay ninguna tecla que active la capa MOUSE (ahora la 3). Además usa
   `&kp K_SCROLL_*` (no hace scroll de ratón) y le falta el movimiento del cursor.
 - **Subtareas:**
   - [ ] Activarla desde TEXT (por ejemplo TEXT + O → `&tog MOUSE`)
@@ -305,7 +305,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
   necesitan ajuste fino. Se valora cuando el Sprint 1 esté estable.
 - **Combos** (por ejemplo J+K = Esc, o pulsar dos teclas a la vez para un atajo).
 - **Encoders, OLED o RGB:** solo si el hardware los tiene (`kyria.conf` los trae comentados).
-- **Repasar el modo juego** (capa 3).
+- ~~Repasar el modo juego~~: capa GAME eliminada el 2026-11-12 (el usuario no la usa). MOUSE pasa a ser la capa 3 y SYM la 4.
 - **Trackball PMW3610 (futuro):** el teclado aún no lo lleva. La rama `origin/PWM3610Add` (jun-2024) fue
   solo una prueba y queda de referencia. La capa MOUSE (#12) se diseña sin él, pero dejando sitio
   para clics y scroll cuando llegue.
