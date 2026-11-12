@@ -3,6 +3,7 @@
 
 Comprueba:
   - que cada capa tenga exactamente KEYS bindings (Kyria = 50 teclas),
+  - que las llaves y < > estén equilibradas,
   - que las referencias a capas (&mo, &tog, &to, &lt, &sl) existan,
   - que las macros ES_* usadas estén definidas,
   - que los comportamientos propios usados (&xxx) estén declarados o sean de ZMK.
@@ -46,6 +47,19 @@ def main() -> int:
             errors.append(f"#include \"{inc}\" no existe")
 
     text = strip_comments(raw)
+
+    # Llaves y corchetes angulares equilibrados (detecta un "};" de más o de menos)
+    depth = 0
+    for i, c in enumerate(text):
+        depth += (c == "{") - (c == "}")
+        if depth < 0:
+            line = text[:i].count("\n") + 1
+            errors.append(f"llave '}}' de más (línea ~{line} sin comentarios)")
+            break
+    if depth > 0:
+        errors.append(f"faltan {depth} llave(s) de cierre")
+    if text.count("<") != text.count(">"):
+        errors.append("'<' y '>' desequilibrados")
 
     # Comportamientos propios: etiqueta: nombre { compatible = ...
     custom = set(re.findall(r"\b(\w+)\s*:\s*[\w-]+\s*\{", text))
