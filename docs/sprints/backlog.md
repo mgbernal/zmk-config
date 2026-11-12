@@ -190,6 +190,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Subtareas:**
   - [x] Comprobar el orden de la barra lateral (captura del 2026-11-12)
   - [x] Confirmar qué hace F20 hoy → nada; se sustituye por Win+Alt+K
+  - [x] 2026-11-12: Win+Alt+K también va en la capa base, en la tecla de arriba a la derecha (antes ç, que el usuario no usa)
   - [ ] El usuario comprueba en una llamada que Win+Alt+K silencia el micro
   - [ ] Proponer la colocación y validarla con el usuario
   - [ ] Implementar
@@ -308,7 +309,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Trackball PMW3610 (futuro):** el teclado aún no lo lleva. La rama `origin/PWM3610Add` (jun-2024) fue
   solo una prueba y queda de referencia. La capa MOUSE (#12) se diseña sin él, pero dejando sitio
   para clics y scroll cuando llegue.
-- **Recolocar ç y º** (`BSLH` y `GRAVE` ocupan sitios buenos y se usan poco).
+- **Recolocar º** (la ç ya se quitó el 2026-11-12: el usuario no la usa; su sitio es ahora el botón del micro) (`BSLH` y `GRAVE` ocupan sitios buenos y se usan poco).
 
 ---
 

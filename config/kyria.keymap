@@ -1,7 +1,8 @@
 #define DEFAULT 0
 // Lo que sale con la distribución española del sistema (entre paréntesis, el keycode US).
+// MUTE = Win+Alt+K: silencia/activa el micro de la llamada de Teams aunque Teams no esté delante (sustituye a ç, que no se usa).
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E   |  R  |  T    |                                                      |    Y    |   U   |  I    |  O   |   P   | ç(\) |
+// | ESC  |  Q  |  W  |  E   |  R  |  T    |                                                      |    Y    |   U   |  I    |  O   |   P   | MUTE  |
 // | TAB  |  A  |  S  |  D   |  F  |  G    |                                                      |    H    |   J   |  K    |  L   | ñ(;)  | ´(') |
 // | CTRL |  Z  |  X  |  C   |  V  |  B    |  *TEXT        |  Pegar/[Copiar]|    |  DEL  |  *TEXT        |    N    |   M   |  ,    |  .   | -(/)  | CTRL |
 //                    | GUI  | *SYM | +[alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  º[altgr]| *NUMS | R-GUI |
@@ -111,7 +112,7 @@
 	
 		default_layer {
 			bindings = <
-	&gresc  &kp Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp BSLH
+	&gresc  &kp Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp LG(LA(K))
 	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &kp SEMI &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &mo LAYER_TEXT   &mt LC(C)  LC(V)  &kp DEL  &mo LAYER_TEXT &kp N         &kp M          &kp COMMA &kp DOT &kp FSLH &kp LCTRL 
 	               &kp LGUI &mo LAYER_SYM &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &smt RALT GRAVE &mo LAYER_NUMS &kp RGUI
