@@ -1,9 +1,10 @@
 #define DEFAULT 0
+// Lo que sale con la distribución española del sistema (entre paréntesis, el keycode US).
 // ---------------------------------------------------------------------------------------------------------------------------------
-// | ESC  |  Q  |  W  |  E   |  R  |  T    |                                                      |    Y    |   U   |  I    |  O   |   P   |   \  |
-// | TAB  |  A  |  S  |  D   |  F  |  G    |                                                      |    H    |   J   |  K    |  L   |   ;   |   '  |
-// | CTRL |  Z  |  X  |  C   |  V  |  B    |  *TEXT        |  Copy/Paste  |      |  DEL  |  *TEXT        |    N    |   M   |  ,    |  .   |   /   | CTRL |
-//                    | GUI  |  [  | ][alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  ` [alt]| *NUMS | R-ALT |
+// | ESC  |  Q  |  W  |  E   |  R  |  T    |                                                      |    Y    |   U   |  I    |  O   |   P   | ç(\) |
+// | TAB  |  A  |  S  |  D   |  F  |  G    |                                                      |    H    |   J   |  K    |  L   | ñ(;)  | ´(') |
+// | CTRL |  Z  |  X  |  C   |  V  |  B    |  *TEXT        |  Pegar/[Copiar]|    |  DEL  |  *TEXT        |    N    |   M   |  ,    |  .   | -(/)  | CTRL |
+//                    | GUI  | *SYM | +[alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  º[altgr]| *NUMS | R-GUI |
 
 #define LAYER_NUMS 1 
 // ---------------------------------------------------------------------------------------------------------------------------------
@@ -36,12 +37,22 @@
 //                      |         |  ESC  |      |       |      |            |      |      |      |       |       |
 
 
+#define LAYER_SYM 5
+// Símbolos (mantener el pulgar izquierdo, la tecla que antes era `).
+// Regla: lo que ABRE va en la mano izquierda y lo que CIERRA en la tecla espejo de la derecha.
+// ---------------------------------------------------------------------------------------------------------------------------------
+// |       |  %  |  <  |  [   |  {  |  €   |                                        |  $  |   }   |  ]   |  >   |   ^   |       |
+// |       |  "  |  ¡  |  (   |  ¿  |  @   |                                        |  #  |   ?   |  )   |  !   |   '   |       |
+// |       |  \  |  `  |  *   |  =  |  &   |        |       |      |       |        |  /  |   _   |  +   |  ~   |   |   |       |
+//                     |      |[SYM] |      |        |       |      |       |        |     |       |      |
+
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/outputs.h>
 #include <dt-bindings/zmk/ext_power.h>
 #include <dt-bindings/zmk/pointing.h>
+#include "es_keys.h"
 
 
 
@@ -75,6 +86,25 @@
     };
         
 	
+  macros {
+        // Teclas muertas del español (` ^ ~): se envía la tecla + Espacio para que salgan solas.
+        es_grv: es_grave {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ES_DGRV &kp SPACE>;
+        };
+        es_circ: es_circumflex {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ES_DCIR &kp SPACE>;
+        };
+        es_tild: es_tilde {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp ES_DTIL &kp SPACE>;
+        };
+    };
+
 	keymap {
 	
 		compatible = "zmk,keymap";
@@ -84,7 +114,7 @@
 	&gresc  &kp Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp BSLH
 	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &kp SEMI &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &mo LAYER_TEXT   &mt LC(C)  LC(V)  &kp DEL  &mo LAYER_TEXT &kp N         &kp M          &kp COMMA &kp DOT &kp FSLH &kp LCTRL 
-	               &kp LGUI &kp LBKT &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &smt RALT GRAVE &mo LAYER_NUMS &kp RGUI
+	               &kp LGUI &mo LAYER_SYM &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &smt RALT GRAVE &mo LAYER_NUMS &kp RGUI
 			>;
 		};
 
@@ -123,6 +153,14 @@
 						&trans &trans   &trans    &trans   &trans               &trans  &trans    &trans   &trans    &trans     
 			>;	
 					
+		};
+		sym_layer {
+			bindings = <
+	&trans   &kp ES_PRCT &kp ES_LT   &kp ES_LBKT &kp ES_LBRC &kp ES_EURO                                     &kp ES_DLLR &kp ES_RBRC &kp ES_RBKT &kp ES_GT   &es_circ    &trans
+	&trans   &kp ES_DQUO &kp ES_IEXL &kp ES_LPAR &kp ES_IQUE &kp ES_AT                                       &kp ES_HASH &kp ES_QUES &kp ES_RPAR &kp ES_EXCL &kp ES_APOS &trans
+	&trans   &kp ES_BSLH &es_grv     &kp ES_STAR &kp ES_EQL  &kp ES_AMPS  &trans  &trans    &trans  &trans  &kp ES_SLSH &kp ES_UNDS &kp ES_PLUS &es_tild    &kp ES_PIPE &trans
+	                     &trans      &trans      &trans      &trans       &trans            &trans  &trans  &trans      &trans      &trans
+			>;
 		};
 	};
 };
