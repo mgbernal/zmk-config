@@ -12,7 +12,7 @@ Firmware ZMK de un Kyria (50 teclas, nice!nano v1). Repositorio: github.com/mgbe
 - **Teclas de capa:** en la base no se usa `&mo` directamente, sino `ls_sym`/`ls_nums`/`ls_text`/`ls_acc`/`ls_herdr`,
   que pueden avisar al PC de la capa activa (`SENAL_CAPAS`, ticket #17).
 - **Behaviors propios:** `smt` (mod-tap seguro para espacios y pulgares), `acc` (pulgar º → capa de
-  acentos), `cpy` (pegar/copiar, tap-preferred), macros `es_grv`/`es_circ`/`es_tild` y `acc_*` (vocales con tilde).
+  acentos), `cpy` (pegar/copiar, tap-preferred), `hrd` (toque Win+1 → herdr-app, mantener → HERDR), macros `es_grv`/`es_circ`/`es_tild` y `acc_*` (vocales con tilde).
 - La versión de ZMK está fijada en `config/west.yml` y en `.github/workflows/build.yml` (el mismo
   commit en los dos). Solo se actualiza a propósito.
 

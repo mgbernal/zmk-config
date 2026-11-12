@@ -634,7 +634,7 @@
     {
      "pos": 49,
      "label": "HERDR",
-     "hint": "mantener",
+     "hint": "toque: Win+1",
      "category": "layer"
     }
    ]
@@ -2237,13 +2237,13 @@
    "index": 6,
    "name": "HERDR",
    "status": "nueva",
-   "activate": "Mantén el pulgar exterior derecho (la tecla HERDR) y pulsa la tecla.",
+   "activate": "Toca la tecla HERDR para traer herdr-app delante (Win+1) y luego mantenla y pulsa la tecla.",
    "held_positions": [
     49
    ],
    "description": "Cada acción de herdr-app con una tecla. Mismos atajos que tu keys.json, sin prefijo.",
    "notes": [
-    "Solo responde con la ventana de herdr-app activa.",
+    "Los atajos van a la ventana activa: primero un toque a HERDR (Win+1, herdr-app anclada la 1ª en la barra de tareas).",
     "Cerrar pestaña va en la esquina, lejos de los dedos, para no pulsarlo sin querer.",
     "No usa Ctrl+Alt+letra (chocaría con AltGr) ni Alt+F4."
    ],

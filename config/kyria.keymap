@@ -5,7 +5,8 @@
 // | ESC  |  Q  |  W  |  E   |  R  |  T    |                                                      |    Y    |   U   |  I    |  O   |   P   | MUTE  |
 // | TAB  |  A  |  S  |  D   |  F  |  G    |                                                      |    H    |   J   |  K    |  L   | ñ(;)  | ´(') |
 // | CTRL |  Z  |  X  |  C   |  V  |  B    |  *TEXT        | Pegar/[Copiar]*|    |  DEL  |  *TEXT        |    N    |   M   |  ,    |  .   | -(/)  | CTRL |
-//                    | GUI  | *SYM | +[alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  º[ACC] | *NUMS | *HERDR |
+//                    | GUI  | *SYM | +[alt]|  SPACE [shift]|  RET         |      |  BKSP |  SPACE [shift]|  º[ACC] | *NUMS | Win+1/[HERDR] |
+// Win+1/[HERDR]: tocar = Win+1 (trae herdr-app, anclada la 1ª en la barra de tareas); mantener = capa HERDR.
 // Pegar/[Copiar]: tocar = Ctrl+V, mantener 250 ms = Ctrl+C (hold-tap tap-preferred, ticket #8).
 
 #define LAYER_NUMS 1 
@@ -115,6 +116,16 @@
             flavor = "balanced";
             tapping-term-ms = <200>;
             bindings = <&ls_acc>, <&kp>;  // el parámetro de capa se ignora: va dentro de ls_acc
+        };
+
+        // Pulgar exterior derecho: tocar = Win+1 (pone delante herdr-app, la 1ª de la barra de tareas);
+        // mantener + otra tecla = capa HERDR. Mismo criterio que acc.
+        hrd: herdr_layer_tap {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "balanced";
+            tapping-term-ms = <200>;
+            bindings = <&ls_herdr>, <&kp>;  // el parámetro de capa se ignora: va dentro de ls_herdr
         };
 
         // Pegar/copiar (ticket #8): tap-preferred = solo es "mantener" si pasan 250 ms,
@@ -305,7 +316,7 @@
 	&gresc  &kp Q &kp W &kp E &kp R &kp T                                                                &kp Y         &kp U          &kp I    &kp O   &kp P    &kp LG(LA(K))
 	&kp TAB  &kp A &kp S &kp D &kp F &kp G                                                               &kp H         &kp J          &kp K    &kp L   &kp SEMI &kp SQT
 	&kp LCTRL &kp Z &kp X &kp C &kp V &kp B         &ls_text   &cpy LC(C) LC(V)  &kp DEL  &ls_text &kp N         &kp M          &kp COMMA &kp DOT &kp FSLH &kp LCTRL 
-	               &kp LGUI &ls_sym &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &acc LAYER_ACC GRAVE &ls_nums &ls_herdr
+	               &kp LGUI &ls_sym &smt LALT RBKT &smt LSHFT SPACE   &kp RET       	 &kp BSPC &smt RSHFT SPACE   &acc LAYER_ACC GRAVE &ls_nums &hrd LAYER_HERDR LG(N1)
 			>;
 		};
 

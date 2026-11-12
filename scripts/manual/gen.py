@@ -153,7 +153,7 @@ p1 = f"""
   <div class="tcol"><div class="th">PULGAR IZQUIERDO</div>
     <table><tr><td>Win</td><td><b>SYM</b><small>mantener</small></td><td>+<small>mant.: Alt</small></td><td>Espacio<small>mant.: Shift</small></td><td>Enter</td></tr></table></div>
   <div class="tcol"><div class="th">PULGAR DERECHO</div>
-    <table><tr><td>Borrar</td><td>Espacio<small>mant.: Shift</small></td><td>º<small>mant.: ACENTOS</small></td><td><b>NUMS</b><small>mantener</small></td><td><b>HERDR</b><small>mantener</small></td></tr></table></div>
+    <table><tr><td>Borrar</td><td>Espacio<small>mant.: Shift</small></td><td>º<small>mant.: ACENTOS</small></td><td><b>NUMS</b><small>mantener</small></td><td><b>HERDR</b><small>toque: Win+1</small></td></tr></table></div>
   <div class="tcol"><div class="th">FILA SUPERIOR DE PULGARES</div>
     <table><tr><td><b>TEXT</b><small>mantener</small></td><td>Pegar<small>mant. ¼ s: copiar</small></td><td>Supr</td><td><b>TEXT</b><small>mantener</small></td></tr></table></div>
 </div>
@@ -180,8 +180,8 @@ p3 = (panel("nums", "CAPA 01", "NUMS · Números", "mantén el pulgar NUMS (dere
 
 herdr_extra = """<b>Paneles:</b> S / D dividen, H J K L mueven el foco, N M , . mueven el panel, Z zoom, X cierra.
   &nbsp;·&nbsp; <b>Pestañas:</b> C nueva, Y / U anterior / siguiente, esquina Ctrl = cerrar.
-  &nbsp;·&nbsp; Solo responde con herdr-app delante."""
-p5 = panel("herdr", "CAPA 06", "HERDR · herdr-app", "mantén el pulgar exterior derecho",
+  &nbsp;·&nbsp; <b>Primero</b> un toque a HERDR: Win+1 pone delante herdr-app (anclada la 1ª en la barra de tareas)."""
+p5 = panel("herdr", "CAPA 06", "HERDR · herdr-app", "toca HERDR (trae la app) y luego mantenla",
            "Cada acción de herdr-app con una tecla, con los mismos atajos de tu keys.json.", herdr_extra)
 
 p4 = """
@@ -209,7 +209,7 @@ p4 = """
       <li>MIC silencia en una llamada de Teams.</li>
       <li><code>~</code> sale solo, sin espacio detrás.</li>
       <li>Pegar rápido no copia; mantener ¼ s copia.</li>
-      <li>HERDR + S divide el panel en herdr-app.</li>
+      <li>Toque HERDR trae herdr-app; HERDR + S divide el panel.</li>
     </ul></section>
   <section class="box"><div class="bh"><span class="code">PROC 04</span><h3>Atajos de bolsillo</h3></div>
     <table class="combo">

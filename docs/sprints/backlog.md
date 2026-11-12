@@ -240,6 +240,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
   - [x] Validar la disposición con el usuario (2026-11-13: «me interesa mucho capa herdr», se implementa la propuesta y se ajusta tras probar)
   - [x] Implementar la capa
   - [x] README, kyria-layout.json y PDF
+  - [x] 2026-11-13: un toque a la tecla HERDR envía Win+1 y pone delante herdr-app (anclada la 1ª en la barra de tareas). Si ya está delante, Windows podría minimizarla: comprobarlo. Lo ideal es que la lanzadera active la ventana al recibir F18 (#17).
   - [ ] Prueba en herdr-app
 - **Test plan:** en herdr-app, cada tecla de la capa hace su acción.
 - **Ficheros:** `config/kyria.keymap`
