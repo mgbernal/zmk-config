@@ -5,14 +5,14 @@ Firmware ZMK de un Kyria (50 teclas, nice!nano v1). Repositorio: github.com/mgbe
 ## Lo que hay que saber antes de tocar el keymap
 - **Windows usa la distribución Español.** ZMK envía códigos US y Windows los traduce, así que los
   símbolos se escriben con las macros `ES_*` de `config/es_keys.h`, nunca con `&kp LPAR`, `&kp AT`, etc.
-- **Capas:** 0 Base · 1 NUMS · 2 TEXT · 3 MOUSE · 4 SYM · 5 ACC (acentos). Si añades o quitas una
+- **Capas:** 0 Base · 1 NUMS · 2 TEXT · 3 MOUSE · 4 SYM · 5 ACC (acentos) · 6 HERDR. Si añades o quitas una
   capa, renumera los `#define` porque el número es el orden en el fichero.
 - **Posiciones:** fila 0 = 0–11, fila 1 = 12–23, fila 2 = 24–39 (30–33 son los pulgares de arriba),
   pulgares = 40–49.
-- **Teclas de capa:** en la base no se usa `&mo` directamente, sino `ls_sym`/`ls_nums`/`ls_text`/`ls_acc`,
+- **Teclas de capa:** en la base no se usa `&mo` directamente, sino `ls_sym`/`ls_nums`/`ls_text`/`ls_acc`/`ls_herdr`,
   que pueden avisar al PC de la capa activa (`SENAL_CAPAS`, ticket #17).
 - **Behaviors propios:** `smt` (mod-tap seguro para espacios y pulgares), `acc` (pulgar º → capa de
-  acentos), macros `es_grv`/`es_circ`/`es_tild` y `acc_*` (vocales con tilde).
+  acentos), `cpy` (pegar/copiar, tap-preferred), macros `es_grv`/`es_circ`/`es_tild` y `acc_*` (vocales con tilde).
 - La versión de ZMK está fijada en `config/west.yml` y en `.github/workflows/build.yml` (el mismo
   commit en los dos). Solo se actualiza a propósito.
 

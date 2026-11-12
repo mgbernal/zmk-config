@@ -1,7 +1,7 @@
 # zmk-config (Kyria) — Sprint Backlog
 
-**Última actualización:** 2026-11-12
-**Sprint activo:** Sprint 1 (pendiente de prueba en el teclado) → Sprint 2
+**Última actualización:** 2026-11-13
+**Sprint activo:** Sprint 3 (Sprints 1 y 2 cerrados; falta la prueba física)
 
 Leyenda: 🟢 PENDIENTE · 🟡 EN CURSO · 🔴 BLOQUEADO · ✅ HECHO
 
@@ -94,7 +94,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ## Sprint 2 — Símbolos y acentos sin esfuerzo
 **Objetivo:** escribir cualquier símbolo con una capa y una tecla, sin AltGr ni teclas muertas.
-**Estado sprint:** 3/4 cerrados
+**Estado sprint:** ✅ CERRADO 2026-11-13 (#5 #6 #7 #16; #8 pasa al Sprint 3)
 
 ### #5 Definiciones para la distribución española (`es_keys.h`)
 - **Sprint:** 2
@@ -139,8 +139,8 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Añadido:** 2026-11-12
 
 ### #8 Arreglar la tecla de copiar/pegar
-- **Sprint:** 2
-- **Estado:** 🟢 PENDIENTE
+- **Sprint:** 3 (movido desde el 2 el 2026-11-13)
+- **Estado:** ✅ HECHO (2026-11-13). Hold-tap propio `cpy` (`tap-preferred`, 250 ms) en la posición 31: tocar = Ctrl+V; solo copia si se mantiene ¼ s, aunque se pulse otra tecla antes. Cortar y deshacer no se añaden aquí: Ctrl+X/Ctrl+Z ya salen con el Ctrl de la esquina, y TEXT+X/V están reservadas para #9. **Falta la prueba física.**
 - **Valor:** medio · **Coste:** S
 - **Descripción:** `&mt LC(C) LC(V)` en modo `hold-preferred` copia por error si se pulsa otra tecla
   durante el toque. Se cambia por un hold-tap `tap-preferred` (toque = pegar, mantener = copiar).
@@ -152,7 +152,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ## Sprint 3 — Atajos de trabajo (reuniones, notas, herdr)
 **Objetivo:** que cualquier atajo de varias teclas se haga con la capa TEXT y una sola tecla.
-**Estado sprint:** 0/4 cerrados
+**Estado sprint:** 2/6 cerrados (#8, #11; #17 en curso)
 
 ### #9 Atajos de Windows de una tecla en la capa TEXT
 - **Sprint:** 3
@@ -201,7 +201,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #11 Capa HERDR: cada acción de herdr-app con una sola tecla
 - **Sprint:** 3
-- **Estado:** 🟢 PENDIENTE (todos los datos confirmados el 2026-11-12)
+- **Estado:** ✅ HECHO (2026-11-13). Capa 6 `herdr_layer` con la propuesta tal cual; se activa con `ls_herdr` en la posición 49 (sustituye a Win derecho, avisa con F18 si `SENAL_CAPAS` = 1). Hoja 05 del PDF y `kyria-layout.json` actualizados. **Falta probarla en herdr-app** y ajustar lo que no guste.
 - **Valor:** alto · **Coste:** M
 - **Datos:** `keys.json` del portátil (`C:\Users\mgbernal\.config\herdr-app\keys.json`), pegado
   por el usuario. **herdr-app no usa prefijo**: todo son acordes directos (Ctrl+Shift+…, Alt+…).
@@ -237,9 +237,10 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
   modificadores del pulgar y la capa NUMS. Si se quiere un acceso más directo, queda para una
   segunda iteración.
 - **Subtareas:**
-  - [ ] Validar la disposición con el usuario
-  - [ ] Implementar las macros y la capa
-  - [ ] Añadirla al README y al dibujo del keymap (#14)
+  - [x] Validar la disposición con el usuario (2026-11-13: «me interesa mucho capa herdr», se implementa la propuesta y se ajusta tras probar)
+  - [x] Implementar la capa
+  - [x] README, kyria-layout.json y PDF
+  - [ ] Prueba en herdr-app
 - **Test plan:** en herdr-app, cada tecla de la capa hace su acción.
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
@@ -310,8 +311,8 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Valor:** alto · **Coste:** M
 - **Descripción:** ZMK no le dice al PC qué capa está activa. Ahora las teclas de capa son macros
   (`ls_sym`, `ls_nums`, `ls_text`, `ls_acc`): `&mo` y, si `SENAL_CAPAS` = 1, un toque de F13 (SYM),
-  F14 (NUMS), F15 (TEXT) o F16 (ACC) al entrar y de F19 al salir. F17 (MOUSE) y F18 (HERDR) quedan
-  reservadas. F20 no se usa porque ya está en TEXT.
+  F14 (NUMS), F15 (TEXT), F16 (ACC) o F18 (HERDR, `ls_herdr`) al entrar y de F19 al salir. F17 (MOUSE)
+  queda reservada. F20 no se usa porque ya está en TEXT.
 - **Por qué está en 0:** sin un programa que se coma esas teclas, una terminal (herdr-app) podría
   recibir F13–F19 como secuencias de escape y escribir basura.
 - **Subtareas:**
@@ -339,7 +340,10 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ## ✅ Historial de sprints cerrados
 
-_(vacío)_
+- **Sprint 1 — Base fiable** (cerrado 2026-11-12): #1 `edc6311`, #2 `5c747ef`, #3 `d558b1c`, #4 `f9055c5`/`8954b51`.
+- **Sprint 2 — Símbolos y acentos** (cerrado 2026-11-13): #5 #6 #7 `c7118b5`, #16 (ACC). #8 pasa al Sprint 3.
+  Lección: con la distribución española casi todo símbolo necesita una macro `ES_*`; el mod-morph
+  resuelve las mayúsculas acentuadas sin tocar Windows.
 
 ---
 
@@ -353,3 +357,4 @@ _(vacío)_
   HERDR y deja de estar bloqueado (solo falta confirmar `keys.json`). Nuevo #15 para las macros de
   texto de mma.
 - 2026-11-12 — El `keys.json` real de herdr-app no tiene prefijo: #11 se rehace con acordes directos.
+- 2026-11-13 — Se cierra el Sprint 2. #8 (copiar/pegar) pasa al Sprint 3, a petición del usuario, y se hace junto con #11 (capa HERDR).

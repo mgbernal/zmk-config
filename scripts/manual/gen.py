@@ -12,7 +12,6 @@ BASE = {k["pos"]: k for k in L["base"]["keys"]}
 # Ajustes de impresión (los datos del JSON llevan notas de pantalla o de planes).
 OVR = {
     ("base", 11): ("MIC", "Win+Alt+K"),
-    ("base", 49): ("Win", None),
     ("base", 31): ("Pegar", "mant.: copiar"),
     ("text", 29): ("F20", "sin uso"),
 }
@@ -26,6 +25,7 @@ CAT = {  # relleno, borde, texto
     "nav":    ("#E4F2EB", "#246B4E", "#0A382A"),
     "media":  ("#F8EAE4", "#C0623F", "#84270B"),
     "sys":    ("#F8EAE4", "#C0623F", "#84270B"),
+    "herdr":  ("#EAF4F6", "#004859", "#004254"),
 }
 U = 100   # unidad SVG por tecla
 GAP = 7
@@ -153,9 +153,9 @@ p1 = f"""
   <div class="tcol"><div class="th">PULGAR IZQUIERDO</div>
     <table><tr><td>Win</td><td><b>SYM</b><small>mantener</small></td><td>+<small>mant.: Alt</small></td><td>Espacio<small>mant.: Shift</small></td><td>Enter</td></tr></table></div>
   <div class="tcol"><div class="th">PULGAR DERECHO</div>
-    <table><tr><td>Borrar</td><td>Espacio<small>mant.: Shift</small></td><td>º<small>mant.: ACENTOS</small></td><td><b>NUMS</b><small>mantener</small></td><td>Win</td></tr></table></div>
+    <table><tr><td>Borrar</td><td>Espacio<small>mant.: Shift</small></td><td>º<small>mant.: ACENTOS</small></td><td><b>NUMS</b><small>mantener</small></td><td><b>HERDR</b><small>mantener</small></td></tr></table></div>
   <div class="tcol"><div class="th">FILA SUPERIOR DE PULGARES</div>
-    <table><tr><td><b>TEXT</b><small>mantener</small></td><td>Pegar<small>mant.: copiar</small></td><td>Supr</td><td><b>TEXT</b><small>mantener</small></td></tr></table></div>
+    <table><tr><td><b>TEXT</b><small>mantener</small></td><td>Pegar<small>mant. ¼ s: copiar</small></td><td>Supr</td><td><b>TEXT</b><small>mantener</small></td></tr></table></div>
 </div>
 {LEGEND}
 """
@@ -177,6 +177,12 @@ p3 = (panel("nums", "CAPA 01", "NUMS · Números", "mantén el pulgar NUMS (dere
             "Números arriba, F1–F12 a la izquierda y teclado numérico a la derecha (0 en el pulgar exterior).", nums_extra)
       + panel("text", "CAPA 02", "TEXT · Navegación", "mantén una tecla TEXT (pulgares de arriba)",
               "Flechas y páginas a la derecha; multimedia, Bluetooth y clics de ratón.", text_extra))
+
+herdr_extra = """<b>Paneles:</b> S / D dividen, H J K L mueven el foco, N M , . mueven el panel, Z zoom, X cierra.
+  &nbsp;·&nbsp; <b>Pestañas:</b> C nueva, Y / U anterior / siguiente, esquina Ctrl = cerrar.
+  &nbsp;·&nbsp; Solo responde con herdr-app delante."""
+p5 = panel("herdr", "CAPA 06", "HERDR · herdr-app", "mantén el pulgar exterior derecho",
+           "Cada acción de herdr-app con una tecla, con los mismos atajos de tu keys.json.", herdr_extra)
 
 p4 = """
 <div class="grid4">
@@ -202,10 +208,12 @@ p4 = """
       <li>ACENTOS: <code>Canción, pingüino, Él añadió más.</code></li>
       <li>MIC silencia en una llamada de Teams.</li>
       <li><code>~</code> sale solo, sin espacio detrás.</li>
+      <li>Pegar rápido no copia; mantener ¼ s copia.</li>
+      <li>HERDR + S divide el panel en herdr-app.</li>
     </ul></section>
   <section class="box"><div class="bh"><span class="code">PROC 04</span><h3>Atajos de bolsillo</h3></div>
     <table class="combo">
-      <tr><td>Copiar / pegar</td><td>mantener / tocar <b>Pegar</b></td></tr>
+      <tr><td>Copiar / pegar</td><td>mantener ¼ s / tocar <b>Pegar</b></td></tr>
       <tr><td>Deshacer</td><td>Ctrl + Z (Ctrl en la esquina izq.)</td></tr>
       <tr><td>Esc</td><td>esquina superior izquierda, o TEXT + SYM</td></tr>
       <tr><td>Captura</td><td>TEXT + T (Impr Pant)</td></tr>
@@ -215,14 +223,15 @@ p4 = """
 </div>
 <div class="status">
   <div class="sh">ESTADO DE SISTEMAS</div>
-  <span class="ok">● BASE</span><span class="ok">● SYM</span><span class="ok">● ACENTOS</span><span class="ok">● NUMS</span><span class="ok">● TEXT</span>
-  <span class="dev">○ MOUSE · en desarrollo</span><span class="dev">○ HERDR · propuesta</span><span class="dev">○ Chuleta en pantalla (lanzadera mma)</span>
+  <span class="ok">● BASE</span><span class="ok">● SYM</span><span class="ok">● ACENTOS</span><span class="ok">● NUMS</span><span class="ok">● TEXT</span><span class="ok">● HERDR</span>
+  <span class="dev">○ MOUSE · en desarrollo</span><span class="dev">○ Chuleta en pantalla (lanzadera mma)</span>
   <div class="links">Mapa interactivo: claude.ai/artifact/Q3eK33p1P4ezNbGABvrzW9 &nbsp;·&nbsp; Código: github.com/mgbernal/zmk-config</div>
 </div>
 """
 
 pages = [(p1, "SECTOR 00 · BASE Y REGLAS"), (p2, "SECTOR 04–05 · SÍMBOLOS Y ACENTOS"),
-         (p3, "SECTOR 01–02 · NÚMEROS Y NAVEGACIÓN"), (p4, "SECTOR 99 · PROCEDIMIENTOS")]
+         (p3, "SECTOR 01–02 · NÚMEROS Y NAVEGACIÓN"), (p5, "SECTOR 06 · HERDR-APP"),
+         (p4, "SECTOR 99 · PROCEDIMIENTOS")]
 body = "".join(page(i + 1, len(pages), b, s) for i, (b, s) in enumerate(pages))
 css = (OUT.parent / "style.css").read_text(encoding="utf-8")
 OUT.write_text(f"""<!doctype html><html lang="es"><head><meta charset="utf-8">

@@ -16,6 +16,7 @@ Mapa visual de todas las capas: [Mapa del Kyria](https://claude.ai/artifact/Q3eK
 | 3 | MOUSE | ninguna, de momento (ticket #12) | clics de ratón |
 | 4 | SYM | mantener el pulgar SYM (izquierdo, junto a Win) | todos los símbolos a una tecla |
 | 5 | ACC | mantener el pulgar º (derecho) | á é í ó ú ü ñ ¿, como AltGr en EE. UU.-Internacional |
+| 6 | HERDR | mantener el pulgar exterior derecho | cada acción de herdr-app con una tecla |
 
 Los espacios hacen de Shift si se mantienen, pero solo cuando no se viene tecleando. Así, al escribir
 rápido no salen mayúsculas pegadas.

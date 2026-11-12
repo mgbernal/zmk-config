@@ -526,7 +526,7 @@
     {
      "pos": 31,
      "label": "Pegar",
-     "hint": "mant.: copiar",
+     "hint": "mant. 250 ms: copiar",
      "category": "mod"
     },
     {
@@ -633,9 +633,9 @@
     },
     {
      "pos": 49,
-     "label": "Win",
-     "hint": "→ HERDR",
-     "category": "mod"
+     "label": "HERDR",
+     "hint": "mantener",
+     "category": "layer"
     }
    ]
   },
@@ -2236,18 +2236,18 @@
    "id": "herdr",
    "index": 6,
    "name": "HERDR",
-   "status": "propuesta",
-   "activate": "Propuesta: mantener el pulgar exterior derecho (ahora Win).",
+   "status": "nueva",
+   "activate": "Mantén el pulgar exterior derecho (la tecla HERDR) y pulsa la tecla.",
    "held_positions": [
     49
    ],
    "description": "Cada acción de herdr-app con una tecla. Mismos atajos que tu keys.json, sin prefijo.",
    "notes": [
-    "Aún no está implementada (ticket #11). Es para validar la disposición.",
+    "Solo responde con la ventana de herdr-app activa.",
     "Cerrar pestaña va en la esquina, lejos de los dedos, para no pulsarlo sin querer.",
     "No usa Ctrl+Alt+letra (chocaría con AltGr) ni Alt+F4."
    ],
-   "test": null,
+   "test": "En herdr-app: dividir (S), mover el foco (H J K L), zoom (Z), cerrar panel (X).",
    "keys": [
     {
      "pos": 0,
