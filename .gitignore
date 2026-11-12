@@ -1,0 +1,11 @@
+# Firmware descargado de GitHub Actions
+*.uf2
+firmware/
+# Builds locales con west, si algún día se usan
+build/
+.west/
+zmk/
+zephyr/
+modules/
+# Python
+__pycache__/

@@ -1,0 +1,3 @@
+#!/bin/sh
+# Valida el keymap antes de cada commit (mismo script que el CI).
+exec python3 scripts/check_keymap.py
