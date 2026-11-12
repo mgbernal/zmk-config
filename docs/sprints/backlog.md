@@ -198,45 +198,48 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
 
-### #11 Capa HERDR: cada acción con una sola tecla
+### #11 Capa HERDR: cada acción de herdr-app con una sola tecla
 - **Sprint:** 3
-- **Estado:** 🟢 PENDIENTE — falta confirmar `keys.json` de herdr-app en el portátil (¿el prefijo
-  sigue siendo Ctrl+B?)
+- **Estado:** 🟢 PENDIENTE (todos los datos confirmados el 2026-11-12)
 - **Valor:** alto · **Coste:** M
-- **Datos (de la sesión `mma-e0`, 2026-11-12):** el uso diario es **herdr-app**, una ventana nativa
-  en Windows (la «cabina MMA») conectada a los agentes del VPS. El prefijo por defecto es
-  **Ctrl+B**: se pulsa, se suelta y luego va la tecla de la acción.
-- **Diseño:** capa nueva **HERDR** que se activa manteniendo el pulgar exterior derecho (posición
-  49, ahora RGUI y casi sin uso). La regla es sencilla: **HERDR + tecla = Ctrl+B y luego esa tecla**,
-  de modo que lo que ya sabes de herdr sigue valiendo, pero en un solo gesto. Cada tecla es una macro
-  `Ctrl+B, <tecla>`.
-  - Letras directas: `a` tablero · `c` nueva pestaña · `n`/`p` pestaña siguiente/anterior ·
-    `v` split vertical · `x` cerrar panel · `z` zoom · `h j k l` mover el foco entre paneles ·
-    `r` redimensionar · `w` workspaces · `g` goto · `b` barra lateral · `o` notificación ·
-    `e` scrollback · `s` ajustes · `q` detach · Tab/Shift+Tab panel siguiente/anterior
-  - Números 1…9 → pestaña N (en la fila de arriba de la capa)
-  - Con Shift (HERDR + Shift + letra): `T` renombrar pestaña · `X` cerrar pestaña · `N` nuevo
-    workspace · `W` renombrar workspace · `D` cerrar workspace · `G` nuevo worktree · `R` recargar
-    config · `P` renombrar panel. Hay que decidir si se hace con mod-morph o con teclas aparte.
-  - Split horizontal «-»: la macro manda la tecla **física** `FSLH`, porque con la distribución
-    española `MINUS` saca «'». Ayuda «?»: se manda `LS(MINUS)`.
-- **Cabina MMA (atajos propios de herdr-app, en la fila de arriba o en los pulgares de la capa):**
-  Alt+F1 cabina · Alt+F2 muro de agentes · Alt+F3 equipo · Alt+F5 métricas · Alt+Shift+C barra de
-  frentes · Alt+Shift+A barra de acciones · Alt+Shift+N navegar frentes · Ctrl+Shift+L alternar
-  muro/cabina. Ctrl+Alt+Shift+Esc (escape de emergencia) va en una posición difícil de pulsar sin
-  querer.
-- **Restricciones:**
-  - No usar acordes Ctrl+Alt+letra propios: en Windows AltGr = Ctrl+Alt y chocan con @ # € [ ] { }.
-  - Nunca generar Alt+F4 (cierra la ventana).
-  - herdr-bar (`herdr-bar.open`) no tiene atajo, y `prefix+k` choca con mover el foco arriba. Si se
-    quiere, hay que asignarlo antes en `keys.json` (propuesta: `prefix+space`) y después mapearlo.
+- **Datos:** `keys.json` del portátil (`C:\Users\mgbernal\.config\herdr-app\keys.json`), pegado
+  por el usuario. **herdr-app no usa prefijo**: todo son acordes directos (Ctrl+Shift+…, Alt+…).
+  El prefijo Ctrl+B solo existe en el herdr clásico (TUI) del VPS, que es lo antiguo y no va en la
+  capa.
+- **Activación:** mantener el pulgar exterior derecho (posición 49, ahora RGUI y casi sin uso).
+- **Propuesta de capa (letra → acción):**
+  ```
+  ·  F1cab F2muro F3equ F5met  L·layout      tab←  tab→  agente↑ agente↓  paleta  barra
+  ·  A·acc  S·split→ D·split↓ F·frentes G·nav    foco←  foco↓  foco↑  foco→   ·      ·
+  ✕tab Z·zoom X·✕panel C·+tab V·renombrar B·+space  ··  ··    mover← mover↓ mover↑ mover→ ·  ·
+  ```
+  | Tecla | Acordes que manda | Acción |
+  |---|---|---|
+  | Q W E R | Alt+F1 / F2 / F3 / F5 | cabina / muro / equipo / métricas |
+  | T | Ctrl+Shift+L | alternar layout |
+  | A · F · G | Alt+Shift+A / C / N | barra de acciones / barra de frentes / navegar frentes |
+  | S · D | Ctrl+Shift+O / E | dividir a la derecha / abajo |
+  | Z · X | Ctrl+Shift+Z / X | zoom / cerrar panel |
+  | C · V · B | Ctrl+Shift+T / F2 / Ctrl+Shift+N | pestaña nueva / renombrar / espacio nuevo |
+  | posición 24 (esquina) | Ctrl+Shift+W | cerrar pestaña (en la esquina para no darle sin querer) |
+  | H J K L | Alt+H/J/K/L | foco entre paneles |
+  | N M , . | Alt+Shift+H/J/K/L | intercambiar paneles |
+  | Y U | Ctrl+Shift+Tab / Ctrl+Tab | pestaña anterior / siguiente |
+  | I O | Alt+↑ / Alt+↓ | agente anterior / siguiente |
+  | P · posición 11 | Ctrl+Shift+P / Ctrl+Shift+B | paleta / barra lateral |
+- **Con la distribución española:** `alt-[` y `alt-]` no se pueden usar (en español [ ] van con
+  AltGr), así que se usa Ctrl+Tab. Para la ayuda va la paleta en lugar de `ctrl-?`. El zoom de la app
+  `ctrl--` usa la tecla física `FSLH`.
+- **Sin conflicto con Teams:** herdr-app y Teams comparten algunos acordes (Ctrl+Shift+O/E/K…), pero
+  cada uno solo responde con su ventana activa.
+- **Espacios y pestañas por número:** Alt+1…9 (espacios) y Ctrl+1…9 (pestañas) ya salen con los
+  modificadores del pulgar y la capa NUMS. Si se quiere un acceso más directo, queda para una
+  segunda iteración.
 - **Subtareas:**
-  - [ ] El usuario confirma en el portátil el prefijo de `keys.json` de herdr-app
-  - [ ] Decidir el atajo de herdr-bar en `keys.json` (opcional)
-  - [ ] Implementar la capa HERDR con macros
+  - [ ] Validar la disposición con el usuario
+  - [ ] Implementar las macros y la capa
   - [ ] Añadirla al README y al dibujo del keymap (#14)
-- **Test plan:** en herdr-app, cada tecla de la capa hace su acción: split, cambiar de pestaña,
-  zoom, tablero, cabina con Alt+F1…
+- **Test plan:** en herdr-app, cada tecla de la capa hace su acción.
 - **Ficheros:** `config/kyria.keymap`
 - **Añadido:** 2026-11-12
 
@@ -321,3 +324,4 @@ _(vacío)_
 - 2026-11-12 — `mma-e0` responde con los atajos de herdr y herdr-app. #11 se rediseña como capa
   HERDR y deja de estar bloqueado (solo falta confirmar `keys.json`). Nuevo #15 para las macros de
   texto de mma.
+- 2026-11-12 — El `keys.json` real de herdr-app no tiene prefijo: #11 se rehace con acordes directos.
