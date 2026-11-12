@@ -171,23 +171,26 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #10 Atajos de Microsoft Teams (reuniones, chats y archivos)
 - **Sprint:** 3
-- **Estado:** 🟢 PENDIENTE — Teams confirmado el 2026-11-12; falta saber cómo funciona hoy F20
+- **Estado:** 🟢 PENDIENTE
 - **Valor:** alto · **Coste:** M
 - **Descripción:** Teams es la herramienta corporativa principal: reuniones, chats y archivos. Se
-  agrupan sus atajos en la mano izquierda de la capa TEXT, junto a F20 (posición 29):
-  - **Reunión:** micro Ctrl+Shift+M · cámara Ctrl+Shift+O · levantar la mano Ctrl+Shift+K ·
+  agrupan sus atajos en la mano izquierda de la capa TEXT:
+  - **Micro global → Win+Alt+K** en la posición 29, la que ahora ocupa **F20, que no hace nada** (el
+    usuario lo confirmó el 2026-11-12). Es el silencio de llamada nativo de Windows 11: funciona con
+    Teams aunque su ventana no esté activa. No hace falta PowerToys; además, su utilidad «Video
+    Conference Mute» ya no existe en versiones recientes.
+  - **Reunión (con Teams activo):** cámara Ctrl+Shift+O · levantar la mano Ctrl+Shift+K ·
     compartir pantalla Ctrl+Shift+E · colgar Ctrl+Shift+H · aceptar llamada Ctrl+Shift+A ·
     rechazarla Ctrl+Shift+D
-  - **Navegación:** buscar Ctrl+E · chat nuevo Ctrl+N · Ctrl+1…6 para Actividad, Chat, Teams,
-    Calendario, Llamadas y Archivos (el orden depende de cómo esté anclada la barra lateral, hay que
-    comprobarlo)
+  - **Navegación:** buscar Ctrl+E · chat nuevo Ctrl+N. Orden de la barra lateral según la captura
+    del usuario: **Ctrl+1 Actividad · Ctrl+2 Calendario · Ctrl+3 Chat · Ctrl+4 Equipos ·
+    Ctrl+5 Llamadas · Ctrl+6 OneDrive/Archivos** (falta comprobar Ctrl+1 y Ctrl+3 en vivo)
   - **Escribir:** abrir el cuadro de redacción grande Ctrl+Shift+X (útil para notas largas en un
     chat)
-- **Nota:** los atajos Ctrl+Shift+… solo funcionan con la ventana de Teams activa. El micro global
-  queda en F20; hay que confirmar qué lo gestiona (¿PowerToys u otra herramienta?) para no duplicar.
 - **Subtareas:**
-  - [ ] Comprobar el orden de Ctrl+1…6 en el Teams del usuario
-  - [ ] Confirmar qué hace F20 hoy
+  - [x] Comprobar el orden de la barra lateral (captura del 2026-11-12)
+  - [x] Confirmar qué hace F20 hoy → nada; se sustituye por Win+Alt+K
+  - [ ] El usuario comprueba en una llamada que Win+Alt+K silencia el micro
   - [ ] Proponer la colocación y validarla con el usuario
   - [ ] Implementar
 - **Test plan:** en una reunión de prueba, cada tecla hace su acción; en el chat, buscar y crear
