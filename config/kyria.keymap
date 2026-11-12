@@ -9,6 +9,7 @@
 // ---------------------------------------------------------------------------------------------------------------------------------
 // |       |   1 |   2 |   3  |   4  |   5  |                                        |  6  |   7   |  8   |  9   |   0   |  -    |
 // |       |  F8 |  F9 |  F10 |  F11 |  F12 |                                        |  /  |   4   |  5   |  6   |   *   |  +    |
+//   (/ * + - van como teclas del teclado numérico: salen bien con la distribución española; = es Shift+0)
 // |       |  F1 |  F2 |  F3  |  F4  |  F5  |   F6   |  F7   |      |       |        |  =  |   1   |  2   |  3   |   ,   |  RET  |
 //                     |      |      |      |        |       |      |       |        |     |       |  0   |
 
@@ -89,9 +90,9 @@
 
 		nums_layer {
 			bindings = <
-	&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                           &kp N6  &kp N7  &kp N8    &kp N9   &kp N0    &kp MINUS  
-	&trans   &kp F8    &kp F9    &kp F10   &kp F11   &kp F12                                             &kp SLASH   &kp N4  &kp N5    &kp N6   &kp ASTERISK     &kp PLUS  
-	&trans   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6  &kp F7         &trans    &trans   &kp EQUAL    &kp N1  &kp N2    &kp N3   &kp COMMA     &kp RET   
+	&kp GRAVE &kp N1 &kp N2 &kp N3 &kp N4 &kp N5                                           &kp N6  &kp N7  &kp N8    &kp N9   &kp N0    &kp KP_MINUS  
+	&trans   &kp F8    &kp F9    &kp F10   &kp F11   &kp F12                                             &kp KP_DIVIDE   &kp N4  &kp N5    &kp N6   &kp KP_MULTIPLY     &kp KP_PLUS  
+	&trans   &kp F1    &kp F2    &kp F3    &kp F4    &kp F5    &kp F6  &kp F7         &trans    &trans   &kp LS(N0)    &kp N1  &kp N2    &kp N3   &kp COMMA     &kp RET   
 	                   &trans    &trans   &trans    &trans    &trans  				&trans         &trans    &trans   &trans     &kp N0     
 			>;
 		};
