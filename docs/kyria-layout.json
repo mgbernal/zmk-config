@@ -1,0 +1,2555 @@
+{
+ "name": "Kyria (zmk-config)",
+ "os_layout": "Windows · Español",
+ "source": "https://github.com/mgbernal/zmk-config/blob/master/config/kyria.keymap",
+ "generated": "2026-11-13",
+ "geometry": {
+  "units": "1u = una tecla",
+  "width": 17.6,
+  "keys": [
+   {
+    "pos": 0,
+    "x": 0,
+    "y": 0.6,
+    "rot": 0
+   },
+   {
+    "pos": 1,
+    "x": 1,
+    "y": 0.6,
+    "rot": 0
+   },
+   {
+    "pos": 2,
+    "x": 2,
+    "y": 0.2,
+    "rot": 0
+   },
+   {
+    "pos": 3,
+    "x": 3,
+    "y": 0,
+    "rot": 0
+   },
+   {
+    "pos": 4,
+    "x": 4,
+    "y": 0.2,
+    "rot": 0
+   },
+   {
+    "pos": 5,
+    "x": 5,
+    "y": 0.35,
+    "rot": 0
+   },
+   {
+    "pos": 6,
+    "x": 11.6,
+    "y": 0.35,
+    "rot": 0
+   },
+   {
+    "pos": 7,
+    "x": 12.6,
+    "y": 0.2,
+    "rot": 0
+   },
+   {
+    "pos": 8,
+    "x": 13.6,
+    "y": 0,
+    "rot": 0
+   },
+   {
+    "pos": 9,
+    "x": 14.6,
+    "y": 0.2,
+    "rot": 0
+   },
+   {
+    "pos": 10,
+    "x": 15.6,
+    "y": 0.6,
+    "rot": 0
+   },
+   {
+    "pos": 11,
+    "x": 16.6,
+    "y": 0.6,
+    "rot": 0
+   },
+   {
+    "pos": 12,
+    "x": 0,
+    "y": 1.6,
+    "rot": 0
+   },
+   {
+    "pos": 13,
+    "x": 1,
+    "y": 1.6,
+    "rot": 0
+   },
+   {
+    "pos": 14,
+    "x": 2,
+    "y": 1.2,
+    "rot": 0
+   },
+   {
+    "pos": 15,
+    "x": 3,
+    "y": 1,
+    "rot": 0
+   },
+   {
+    "pos": 16,
+    "x": 4,
+    "y": 1.2,
+    "rot": 0
+   },
+   {
+    "pos": 17,
+    "x": 5,
+    "y": 1.35,
+    "rot": 0
+   },
+   {
+    "pos": 18,
+    "x": 11.6,
+    "y": 1.35,
+    "rot": 0
+   },
+   {
+    "pos": 19,
+    "x": 12.6,
+    "y": 1.2,
+    "rot": 0
+   },
+   {
+    "pos": 20,
+    "x": 13.6,
+    "y": 1,
+    "rot": 0
+   },
+   {
+    "pos": 21,
+    "x": 14.6,
+    "y": 1.2,
+    "rot": 0
+   },
+   {
+    "pos": 22,
+    "x": 15.6,
+    "y": 1.6,
+    "rot": 0
+   },
+   {
+    "pos": 23,
+    "x": 16.6,
+    "y": 1.6,
+    "rot": 0
+   },
+   {
+    "pos": 24,
+    "x": 0,
+    "y": 2.6,
+    "rot": 0
+   },
+   {
+    "pos": 25,
+    "x": 1,
+    "y": 2.6,
+    "rot": 0
+   },
+   {
+    "pos": 26,
+    "x": 2,
+    "y": 2.2,
+    "rot": 0
+   },
+   {
+    "pos": 27,
+    "x": 3,
+    "y": 2,
+    "rot": 0
+   },
+   {
+    "pos": 28,
+    "x": 4,
+    "y": 2.2,
+    "rot": 0
+   },
+   {
+    "pos": 29,
+    "x": 5,
+    "y": 2.35,
+    "rot": 0
+   },
+   {
+    "pos": 30,
+    "x": 6.15,
+    "y": 2.7,
+    "rot": 14
+   },
+   {
+    "pos": 31,
+    "x": 7.2,
+    "y": 3.08,
+    "rot": 26
+   },
+   {
+    "pos": 32,
+    "x": 9.4,
+    "y": 3.08,
+    "rot": -26
+   },
+   {
+    "pos": 33,
+    "x": 10.45,
+    "y": 2.7,
+    "rot": -14
+   },
+   {
+    "pos": 34,
+    "x": 11.6,
+    "y": 2.35,
+    "rot": 0
+   },
+   {
+    "pos": 35,
+    "x": 12.6,
+    "y": 2.2,
+    "rot": 0
+   },
+   {
+    "pos": 36,
+    "x": 13.6,
+    "y": 2,
+    "rot": 0
+   },
+   {
+    "pos": 37,
+    "x": 14.6,
+    "y": 2.2,
+    "rot": 0
+   },
+   {
+    "pos": 38,
+    "x": 15.6,
+    "y": 2.6,
+    "rot": 0
+   },
+   {
+    "pos": 39,
+    "x": 16.6,
+    "y": 2.6,
+    "rot": 0
+   },
+   {
+    "pos": 40,
+    "x": 2.1,
+    "y": 3.72,
+    "rot": 0
+   },
+   {
+    "pos": 41,
+    "x": 3.12,
+    "y": 3.72,
+    "rot": 0
+   },
+   {
+    "pos": 42,
+    "x": 4.17,
+    "y": 3.84,
+    "rot": 10
+   },
+   {
+    "pos": 43,
+    "x": 5.22,
+    "y": 4.06,
+    "rot": 20
+   },
+   {
+    "pos": 44,
+    "x": 6.22,
+    "y": 4.44,
+    "rot": 30
+   },
+   {
+    "pos": 45,
+    "x": 10.38,
+    "y": 4.44,
+    "rot": -30
+   },
+   {
+    "pos": 46,
+    "x": 11.38,
+    "y": 4.06,
+    "rot": -20
+   },
+   {
+    "pos": 47,
+    "x": 12.43,
+    "y": 3.84,
+    "rot": -10
+   },
+   {
+    "pos": 48,
+    "x": 13.48,
+    "y": 3.72,
+    "rot": 0
+   },
+   {
+    "pos": 49,
+    "x": 14.5,
+    "y": 3.72,
+    "rot": 0
+   }
+  ]
+ },
+ "categories": [
+  "letter",
+  "mod",
+  "layer",
+  "sym",
+  "num",
+  "nav",
+  "media",
+  "sys",
+  "herdr",
+  "trans"
+ ],
+ "layers": [
+  {
+   "id": "base",
+   "index": 0,
+   "name": "Base",
+   "status": "activa",
+   "activate": "Siempre activa.",
+   "held_positions": [],
+   "description": "QWERTY con las teclas españolas en su sitio: ñ, la tilde (´) para los acentos. Arriba a la derecha, donde estaba la ç, va el botón del micro de Teams (Win+Alt+K). Los dos espacios hacen de Shift si los mantienes; + hace de Alt si lo mantienes; º abre la capa de acentos.",
+   "notes": [
+    "Hoy: los espacios ya no se convierten en Shift al escribir rápido. Solo son Shift si mantienes, pulsas otra tecla y la sueltas antes. Si vienes tecleando hace menos de 125 ms, siempre sale espacio.",
+    "Hoy: la tecla del pulgar izquierdo que era ` ahora abre la capa SYM.",
+    "La tecla Win derecha se convertirá en la capa HERDR (ticket #11)."
+   ],
+   "test": null,
+   "keys": [
+    {
+     "pos": 0,
+     "label": "Esc",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 1,
+     "label": "Q",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 2,
+     "label": "W",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 3,
+     "label": "E",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 4,
+     "label": "R",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 5,
+     "label": "T",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 6,
+     "label": "Y",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 7,
+     "label": "U",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 8,
+     "label": "I",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 9,
+     "label": "O",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 10,
+     "label": "P",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 11,
+     "label": "🎤",
+     "hint": "Win+Alt+K · micro",
+     "category": "media"
+    },
+    {
+     "pos": 12,
+     "label": "Tab",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 13,
+     "label": "A",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 14,
+     "label": "S",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 15,
+     "label": "D",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 16,
+     "label": "F",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 17,
+     "label": "G",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 18,
+     "label": "H",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 19,
+     "label": "J",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 20,
+     "label": "K",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 21,
+     "label": "L",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 22,
+     "label": "ñ",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 23,
+     "label": "´",
+     "hint": "tilde",
+     "category": "letter"
+    },
+    {
+     "pos": 24,
+     "label": "Ctrl",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 25,
+     "label": "Z",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 26,
+     "label": "X",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 27,
+     "label": "C",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 28,
+     "label": "V",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 29,
+     "label": "B",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 30,
+     "label": "TEXT",
+     "hint": "mantener",
+     "category": "layer"
+    },
+    {
+     "pos": 31,
+     "label": "Pegar",
+     "hint": "mant.: copiar",
+     "category": "mod"
+    },
+    {
+     "pos": 32,
+     "label": "Supr",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 33,
+     "label": "TEXT",
+     "hint": "mantener",
+     "category": "layer"
+    },
+    {
+     "pos": 34,
+     "label": "N",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 35,
+     "label": "M",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 36,
+     "label": ",",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 37,
+     "label": ".",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 38,
+     "label": "-",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 39,
+     "label": "Ctrl",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 40,
+     "label": "Win",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 41,
+     "label": "SYM",
+     "hint": "mantener",
+     "category": "layer"
+    },
+    {
+     "pos": 42,
+     "label": "+",
+     "hint": "mant.: Alt",
+     "category": "mod"
+    },
+    {
+     "pos": 43,
+     "label": "Espacio",
+     "hint": "mant.: Shift",
+     "category": "mod"
+    },
+    {
+     "pos": 44,
+     "label": "Enter",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 45,
+     "label": "Borrar",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 46,
+     "label": "Espacio",
+     "hint": "mant.: Shift",
+     "category": "mod"
+    },
+    {
+     "pos": 47,
+     "label": "º",
+     "hint": "mant.: ACENTOS",
+     "category": "layer"
+    },
+    {
+     "pos": 48,
+     "label": "NUMS",
+     "hint": "mantener",
+     "category": "layer"
+    },
+    {
+     "pos": 49,
+     "label": "Win",
+     "hint": "→ HERDR",
+     "category": "mod"
+    }
+   ]
+  },
+  {
+   "id": "sym",
+   "index": 4,
+   "name": "SYM",
+   "status": "nueva",
+   "activate": "Mantén el pulgar izquierdo (la tecla junto a Win) y pulsa la tecla.",
+   "held_positions": [
+    41
+   ],
+   "description": "Todos los símbolos a una tecla, sin AltGr ni teclas muertas. Lo que abre va en la mano izquierda y lo que cierra en la tecla espejo de la derecha.",
+   "notes": [
+    "Fila central, lo más usado: ¿/? en los índices, (/) en los medios, ¡/! en los anulares.",
+    "@ (menciones y correos) y # (títulos en Markdown) en el estiramiento de los índices.",
+    "` ^ ~ salen solos: la macro envía la tecla muerta y luego Espacio."
+   ],
+   "test": "¿Qué tal? ¡Bien! (nota) user@mail.com\n# Título  {\"a\": [1, 2]}  <b>  ~/mma",
+   "keys": [
+    {
+     "pos": 0,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 1,
+     "label": "%",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 2,
+     "label": "<",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 3,
+     "label": "[",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 4,
+     "label": "{",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 5,
+     "label": "€",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 6,
+     "label": "$",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 7,
+     "label": "}",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 8,
+     "label": "]",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 9,
+     "label": ">",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 10,
+     "label": "^",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 11,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 12,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 13,
+     "label": "\"",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 14,
+     "label": "¡",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 15,
+     "label": "(",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 16,
+     "label": "¿",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 17,
+     "label": "@",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 18,
+     "label": "#",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 19,
+     "label": "?",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 20,
+     "label": ")",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 21,
+     "label": "!",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 22,
+     "label": "'",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 23,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 24,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 25,
+     "label": "\\",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 26,
+     "label": "`",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 27,
+     "label": "*",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 28,
+     "label": "=",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 29,
+     "label": "&",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 30,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 31,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 32,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 33,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 34,
+     "label": "/",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 35,
+     "label": "_",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 36,
+     "label": "+",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 37,
+     "label": "~",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 38,
+     "label": "|",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 39,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 40,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 41,
+     "label": "SYM",
+     "hint": "mantenida",
+     "category": "layer"
+    },
+    {
+     "pos": 42,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 43,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 44,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 45,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 46,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 47,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 48,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 49,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    }
+   ]
+  },
+  {
+   "id": "nums",
+   "index": 1,
+   "name": "NUMS",
+   "status": "activa",
+   "activate": "Mantén el pulgar derecho (la tecla NUMS) y pulsa la tecla.",
+   "held_positions": [
+    48
+   ],
+   "description": "Números en la fila de arriba, F1–F12 a la izquierda y teclado numérico a la derecha.",
+   "notes": [
+    "Hoy: los operadores ÷ × + − ahora son teclas del teclado numérico y salen bien con la distribución española. Antes salían - ( ¿ ' ¡.",
+    "La coma decimal se queda tal cual: en Excel español es el separador decimal.",
+    "El 0 va en la tecla exterior del pulgar derecho."
+   ],
+   "test": "12/3*4+5-6=",
+   "keys": [
+    {
+     "pos": 0,
+     "label": "º",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 1,
+     "label": "1",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 2,
+     "label": "2",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 3,
+     "label": "3",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 4,
+     "label": "4",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 5,
+     "label": "5",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 6,
+     "label": "6",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 7,
+     "label": "7",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 8,
+     "label": "8",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 9,
+     "label": "9",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 10,
+     "label": "0",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 11,
+     "label": "−",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 12,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 13,
+     "label": "F8",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 14,
+     "label": "F9",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 15,
+     "label": "F10",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 16,
+     "label": "F11",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 17,
+     "label": "F12",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 18,
+     "label": "÷",
+     "hint": "/",
+     "category": "num"
+    },
+    {
+     "pos": 19,
+     "label": "4",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 20,
+     "label": "5",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 21,
+     "label": "6",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 22,
+     "label": "×",
+     "hint": "*",
+     "category": "num"
+    },
+    {
+     "pos": 23,
+     "label": "+",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 24,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 25,
+     "label": "F1",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 26,
+     "label": "F2",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 27,
+     "label": "F3",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 28,
+     "label": "F4",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 29,
+     "label": "F5",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 30,
+     "label": "F6",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 31,
+     "label": "F7",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 32,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 33,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 34,
+     "label": "=",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 35,
+     "label": "1",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 36,
+     "label": "2",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 37,
+     "label": "3",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 38,
+     "label": ",",
+     "hint": null,
+     "category": "num"
+    },
+    {
+     "pos": 39,
+     "label": "Enter",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 40,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 41,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 42,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 43,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 44,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 45,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 46,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 47,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 48,
+     "label": "NUMS",
+     "hint": "mantenida",
+     "category": "layer"
+    },
+    {
+     "pos": 49,
+     "label": "0",
+     "hint": null,
+     "category": "num"
+    }
+   ]
+  },
+  {
+   "id": "text",
+   "index": 2,
+   "name": "TEXT",
+   "status": "activa",
+   "activate": "Mantén una de las dos teclas TEXT (pulgares superiores) y pulsa la tecla.",
+   "held_positions": [
+    30,
+    33
+   ],
+   "description": "Flechas y páginas en la mano derecha, multimedia y Bluetooth en la izquierda.",
+   "notes": [
+    "Pendiente (#9): TEXT + Espacio = Win+Espacio, TEXT + V = historial del portapapeles, TEXT + R = recorte, TEXT + X = dictado.",
+    "Pendiente (#10): atajos de Teams, y F20 pasa a Win+Alt+K (silenciar el micro aunque Teams no esté delante).",
+    "Los clics de ratón están aquí, pero no hay movimiento del cursor (#12)."
+   ],
+   "test": null,
+   "keys": [
+    {
+     "pos": 0,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 1,
+     "label": "Apagar ext.",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 2,
+     "label": "Encender ext.",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 3,
+     "label": "Vol +",
+     "hint": null,
+     "category": "media"
+    },
+    {
+     "pos": 4,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 5,
+     "label": "Impr Pant",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 6,
+     "label": "Clic izq.",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 7,
+     "label": "Clic der.",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 8,
+     "label": "↑",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 9,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 10,
+     "label": "Insert",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 11,
+     "label": "Re Pág",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 12,
+     "label": "BT 0",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 13,
+     "label": "BT 1",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 14,
+     "label": "⏮",
+     "hint": "anterior",
+     "category": "media"
+    },
+    {
+     "pos": 15,
+     "label": "⏯",
+     "hint": "play",
+     "category": "media"
+    },
+    {
+     "pos": 16,
+     "label": "⏭",
+     "hint": "siguiente",
+     "category": "media"
+    },
+    {
+     "pos": 17,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 18,
+     "label": "Clic central",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 19,
+     "label": "←",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 20,
+     "label": "↓",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 21,
+     "label": "→",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 22,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 23,
+     "label": "Av Pág",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 24,
+     "label": "Borrar BT",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 25,
+     "label": "USB / BT",
+     "hint": null,
+     "category": "sys"
+    },
+    {
+     "pos": 26,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 27,
+     "label": "Vol −",
+     "hint": null,
+     "category": "media"
+    },
+    {
+     "pos": 28,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 29,
+     "label": "F20",
+     "hint": "→ Win+Alt+K",
+     "category": "media"
+    },
+    {
+     "pos": 30,
+     "label": "TEXT",
+     "hint": "mantenida",
+     "category": "layer"
+    },
+    {
+     "pos": 31,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 32,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 33,
+     "label": "TEXT",
+     "hint": "mantenida",
+     "category": "layer"
+    },
+    {
+     "pos": 34,
+     "label": "Atrás",
+     "hint": "ratón",
+     "category": "nav"
+    },
+    {
+     "pos": 35,
+     "label": "Adelante",
+     "hint": "ratón",
+     "category": "nav"
+    },
+    {
+     "pos": 36,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 37,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 38,
+     "label": "Inicio",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 39,
+     "label": "Fin",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 40,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 41,
+     "label": "Esc",
+     "hint": null,
+     "category": "mod"
+    },
+    {
+     "pos": 42,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 43,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 44,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 45,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 46,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 47,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 48,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 49,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    }
+   ]
+  },
+  {
+   "id": "mouse",
+   "index": 3,
+   "name": "MOUSE",
+   "status": "rota",
+   "activate": "Ahora mismo ninguna tecla activa esta capa.",
+   "held_positions": [],
+   "description": "Capa a medio hacer: tiene clics, pero no movimiento, y el scroll usa un código que no mueve la rueda.",
+   "notes": [
+    "Ticket #12: activarla desde TEXT, mover el cursor con I/J/K/L, scroll real y clics en la mano izquierda.",
+    "Se deja hueco para el futuro trackball PMW3610."
+   ],
+   "test": null,
+   "keys": [
+    {
+     "pos": 0,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 1,
+     "label": "Salir",
+     "hint": "a la base",
+     "category": "layer"
+    },
+    {
+     "pos": 2,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 3,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 4,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 5,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 6,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 7,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 8,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 9,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 10,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 11,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 12,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 13,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 14,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 15,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 16,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 17,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 18,
+     "label": "Scroll ↑",
+     "hint": "no funciona",
+     "category": "nav"
+    },
+    {
+     "pos": 19,
+     "label": "Clic izq.",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 20,
+     "label": "Clic central",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 21,
+     "label": "Clic der.",
+     "hint": null,
+     "category": "nav"
+    },
+    {
+     "pos": 22,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 23,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 24,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 25,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 26,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 27,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 28,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 29,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 30,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 31,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 32,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 33,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 34,
+     "label": "Scroll ↓",
+     "hint": "no funciona",
+     "category": "nav"
+    },
+    {
+     "pos": 35,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 36,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 37,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 38,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 39,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 40,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 41,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 42,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 43,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 44,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 45,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 46,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 47,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 48,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 49,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    }
+   ]
+  },
+  {
+   "id": "acc",
+   "index": 5,
+   "name": "ACENTOS",
+   "status": "nueva",
+   "activate": "Mantén el pulgar º (el que era AltGr) y pulsa la letra, como en EE. UU.-Internacional.",
+   "held_positions": [
+    47
+   ],
+   "description": "Vocales con tilde, ñ, ü y ¿ de una pulsación, con Windows en español. Si pulsas º sin mantener, sale º.",
+   "notes": [
+    "Mayúsculas: mantén además un espacio (Shift) y sale Á É Í Ó Ú Ñ Ü.",
+    "La tecla ´ de la capa base sigue funcionando como siempre.",
+    "Se pierde el AltGr como tal: los símbolos que lo necesitaban (@ # € | [ ] { } \\) están en SYM."
+   ],
+   "test": "Canción, pingüino, ¿Ómnibus? Él añadió más.",
+   "keys": [
+    {
+     "pos": 0,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 1,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 2,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 3,
+     "label": "é",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 4,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 5,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 6,
+     "label": "ü",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 7,
+     "label": "ú",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 8,
+     "label": "í",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 9,
+     "label": "ó",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 10,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 11,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 12,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 13,
+     "label": "á",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 14,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 15,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 16,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 17,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 18,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 19,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 20,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 21,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 22,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 23,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 24,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 25,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 26,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 27,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 28,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 29,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 30,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 31,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 32,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 33,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 34,
+     "label": "ñ",
+     "hint": null,
+     "category": "letter"
+    },
+    {
+     "pos": 35,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 36,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 37,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 38,
+     "label": "¿",
+     "hint": null,
+     "category": "sym"
+    },
+    {
+     "pos": 39,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 40,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 41,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 42,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 43,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 44,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 45,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 46,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 47,
+     "label": "ACENTOS",
+     "hint": "mantenida",
+     "category": "layer"
+    },
+    {
+     "pos": 48,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 49,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    }
+   ]
+  },
+  {
+   "id": "herdr",
+   "index": 6,
+   "name": "HERDR",
+   "status": "propuesta",
+   "activate": "Propuesta: mantener el pulgar exterior derecho (ahora Win).",
+   "held_positions": [
+    49
+   ],
+   "description": "Cada acción de herdr-app con una tecla. Mismos atajos que tu keys.json, sin prefijo.",
+   "notes": [
+    "Aún no está implementada (ticket #11). Es para validar la disposición.",
+    "Cerrar pestaña va en la esquina, lejos de los dedos, para no pulsarlo sin querer.",
+    "No usa Ctrl+Alt+letra (chocaría con AltGr) ni Alt+F4."
+   ],
+   "test": null,
+   "keys": [
+    {
+     "pos": 0,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 1,
+     "label": "Cabina",
+     "hint": "Alt+F1",
+     "category": "herdr"
+    },
+    {
+     "pos": 2,
+     "label": "Muro",
+     "hint": "Alt+F2",
+     "category": "herdr"
+    },
+    {
+     "pos": 3,
+     "label": "Equipo",
+     "hint": "Alt+F3",
+     "category": "herdr"
+    },
+    {
+     "pos": 4,
+     "label": "Métricas",
+     "hint": "Alt+F5",
+     "category": "herdr"
+    },
+    {
+     "pos": 5,
+     "label": "Layout",
+     "hint": "Ctrl+⇧+L",
+     "category": "herdr"
+    },
+    {
+     "pos": 6,
+     "label": "Pestaña ←",
+     "hint": "Ctrl+⇧+Tab",
+     "category": "herdr"
+    },
+    {
+     "pos": 7,
+     "label": "Pestaña →",
+     "hint": "Ctrl+Tab",
+     "category": "herdr"
+    },
+    {
+     "pos": 8,
+     "label": "Agente ↑",
+     "hint": "Alt+↑",
+     "category": "herdr"
+    },
+    {
+     "pos": 9,
+     "label": "Agente ↓",
+     "hint": "Alt+↓",
+     "category": "herdr"
+    },
+    {
+     "pos": 10,
+     "label": "Paleta",
+     "hint": "Ctrl+⇧+P",
+     "category": "herdr"
+    },
+    {
+     "pos": 11,
+     "label": "Barra lateral",
+     "hint": "Ctrl+⇧+B",
+     "category": "herdr"
+    },
+    {
+     "pos": 12,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 13,
+     "label": "Acciones",
+     "hint": "Alt+⇧+A",
+     "category": "herdr"
+    },
+    {
+     "pos": 14,
+     "label": "Dividir →",
+     "hint": "Ctrl+⇧+O",
+     "category": "herdr"
+    },
+    {
+     "pos": 15,
+     "label": "Dividir ↓",
+     "hint": "Ctrl+⇧+E",
+     "category": "herdr"
+    },
+    {
+     "pos": 16,
+     "label": "Frentes",
+     "hint": "Alt+⇧+C",
+     "category": "herdr"
+    },
+    {
+     "pos": 17,
+     "label": "Navegar",
+     "hint": "Alt+⇧+N",
+     "category": "herdr"
+    },
+    {
+     "pos": 18,
+     "label": "Foco ←",
+     "hint": "Alt+H",
+     "category": "herdr"
+    },
+    {
+     "pos": 19,
+     "label": "Foco ↓",
+     "hint": "Alt+J",
+     "category": "herdr"
+    },
+    {
+     "pos": 20,
+     "label": "Foco ↑",
+     "hint": "Alt+K",
+     "category": "herdr"
+    },
+    {
+     "pos": 21,
+     "label": "Foco →",
+     "hint": "Alt+L",
+     "category": "herdr"
+    },
+    {
+     "pos": 22,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 23,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 24,
+     "label": "Cerrar pestaña",
+     "hint": "Ctrl+⇧+W",
+     "category": "sys"
+    },
+    {
+     "pos": 25,
+     "label": "Zoom",
+     "hint": "Ctrl+⇧+Z",
+     "category": "herdr"
+    },
+    {
+     "pos": 26,
+     "label": "Cerrar panel",
+     "hint": "Ctrl+⇧+X",
+     "category": "sys"
+    },
+    {
+     "pos": 27,
+     "label": "Pestaña nueva",
+     "hint": "Ctrl+⇧+T",
+     "category": "herdr"
+    },
+    {
+     "pos": 28,
+     "label": "Renombrar",
+     "hint": "F2",
+     "category": "herdr"
+    },
+    {
+     "pos": 29,
+     "label": "Espacio nuevo",
+     "hint": "Ctrl+⇧+N",
+     "category": "herdr"
+    },
+    {
+     "pos": 30,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 31,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 32,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 33,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 34,
+     "label": "Mover ←",
+     "hint": "Alt+⇧+H",
+     "category": "herdr"
+    },
+    {
+     "pos": 35,
+     "label": "Mover ↓",
+     "hint": "Alt+⇧+J",
+     "category": "herdr"
+    },
+    {
+     "pos": 36,
+     "label": "Mover ↑",
+     "hint": "Alt+⇧+K",
+     "category": "herdr"
+    },
+    {
+     "pos": 37,
+     "label": "Mover →",
+     "hint": "Alt+⇧+L",
+     "category": "herdr"
+    },
+    {
+     "pos": 38,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 39,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 40,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 41,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 42,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 43,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 44,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 45,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 46,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 47,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 48,
+     "label": null,
+     "hint": null,
+     "category": "trans"
+    },
+    {
+     "pos": 49,
+     "label": "HERDR",
+     "hint": "mantenida",
+     "category": "layer"
+    }
+   ]
+  }
+ ]
+}

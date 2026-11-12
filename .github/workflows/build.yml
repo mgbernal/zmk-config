@@ -11,3 +11,22 @@ jobs:
     needs: check
     # Fijado al mismo commit de ZMK que config/west.yml (main del 2026-06-07, la versión que compiló el último firmware bueno)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@ff09f2d0c9f13a868c8f71d71d9348ade438e4b6
+
+  # Al subir una etiqueta fw-* (firmware probado en el teclado) se crea una Release con los .uf2.
+  # Los artefactos de Actions caducan a los 90 días; las Releases se quedan para siempre.
+  release:
+    needs: build
+    if: startsWith(github.ref, 'refs/tags/fw-')
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          name: firmware
+          path: firmware
+      - env:
+          GH_TOKEN: ${{ github.token }}
+        run: >
+          gh release create "$GITHUB_REF_NAME" firmware/*.uf2
+          --repo "$GITHUB_REPOSITORY" --title "$GITHUB_REF_NAME" --generate-notes

@@ -290,7 +290,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #14 README con mapa visual (keymap-drawer)
 - **Sprint:** 4
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** 🟡 EN CURSO. 2026-11-13: README.md, docs/procedimientos.md y docs/kyria-layout.json (datos de las capas para la lanzadera de mma). Falta: keymap-drawer
 - **Valor:** medio · **Coste:** M
 - **Descripción:** README que explique cómo flashear y cada capa, más un SVG del mapa generado
   automáticamente con keymap-drawer en un GitHub Action. Debe mostrar los caracteres en español.
@@ -304,6 +304,20 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Descripción:** el usuario prefiere poner los acentos con AltGr, como en EE. UU.-Internacional, pero sin cambiar Windows. Al mantener el pulgar º se abre la capa ACC (5): A E I O U dan á é í ó ú (macro ´ + vocal; con Shift salen Á É Í Ó Ú gracias a un mod-morph que quita el Shift de la ´), Y da ü, N da ñ y la tecla de - da ¿. Si se pulsa sin mantener, sale º. El pulgar deja de ser AltGr, pero los símbolos que lo necesitaban ya están en SYM.
 - **Prueba física:** «Canción, pingüino, ¿Ómnibus? Él añadió más.»
 - **Ficheros:** config/kyria.keymap
+
+### #17 Avisar al PC de la capa activa (para la chuleta de la lanzadera mma)
+- **Sprint:** 3 · **Estado:** 🟢 PENDIENTE · **Valor:** alto · **Coste:** M
+- **Descripción:** ZMK no le dice al PC qué capa está activa. Para que la lanzadera muestre la chuleta de la capa
+  que se está manteniendo, cada tecla de capa enviará una tecla F que no usa nadie al pulsarse y otra al soltarse
+  (macros con `&macro_press &mo N` + `&macro_tap &kp F1x` / `&macro_pause_for_release` / `&macro_release` + `&kp F19`).
+  Protocolo: F13 = SYM, F14 = NUMS, F15 = TEXT, F16 = ACC, F17 = MOUSE, F18 = HERDR, F19 = vuelta a la base.
+  F20 no se usa porque ya está en TEXT.
+- **Subtareas:**
+  - [ ] Macros de capa para SYM y NUMS (`&mo` normal) y TEXT
+  - [ ] ACC: el hold-tap `acc` necesita un macro con parámetros como binding de hold
+  - [ ] Probar que F13–F19 no hacen nada raro en Teams, herdr-app ni el navegador
+- **Ficheros:** config/kyria.keymap · **Depende de:** que la lanzadera escuche esas teclas
+- **Añadido:** 2026-11-13
 
 ## 📅 Diferido
 

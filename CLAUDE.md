@@ -27,3 +27,6 @@ Firmware ZMK de un Kyria (50 teclas, nice!nano v1). Repositorio: github.com/mgbe
 - Backlog y estado: `docs/sprints/backlog.md` (skill project-sprints).
 - Mapa visual de las capas: artefacto «Mapa del Kyria», https://claude.ai/artifact/Q3eK33p1P4ezNbGABvrzW9.
   Hay que actualizarlo cuando cambie el keymap.
+- `docs/kyria-layout.json`: los mismos datos en JSON (geometría, capas, etiquetas). Lo usa la
+  lanzadera de mma para mostrar la chuleta, así que también hay que regenerarlo con cada cambio.
+- Procedimientos (ramas, flasheo, etiquetas `fw-*`, vuelta atrás): `docs/procedimientos.md`.
