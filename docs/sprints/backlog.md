@@ -94,11 +94,11 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ## Sprint 2 — Símbolos y acentos sin esfuerzo
 **Objetivo:** escribir cualquier símbolo con una capa y una tecla, sin AltGr ni teclas muertas.
-**Estado sprint:** 0/4 cerrados
+**Estado sprint:** 3/4 cerrados
 
 ### #5 Definiciones para la distribución española (`es_keys.h`)
 - **Sprint:** 2
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commit `c7118b5`. `config/es_keys.h`.
 - **Valor:** alto · **Coste:** S
 - **Descripción:** cabecera con nombres legibles que encapsulan la traducción US→ES, por ejemplo
   `ES_AT = RA(N2)`, `ES_LBRC = RA(LBKT)`, `ES_LCBR = RA(SQT)`, `ES_PIPE = RA(N1)`,
@@ -109,7 +109,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #6 Capa SYM accesible con el pulgar
 - **Sprint:** 2
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commit `c7118b5`. Disposición revisada por ergonomía (ver diagrama en `kyria.keymap`): lo que abre va en la izquierda y lo que cierra en la tecla espejo de la derecha; ¿? ( ) ¡! en la fila central con índice, medio y anular; @ y # en los índices. Falta la prueba física.
 - **Valor:** alto · **Coste:** M
 - **Descripción:** capa nueva de símbolos que se activa manteniendo el pulgar izquierdo interior
   (posición 41, ahora la tecla muerta «`», que pasa a esta capa). Propuesta inicial, a validar con
@@ -130,7 +130,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #7 Teclas muertas que se escriben de un toque
 - **Sprint:** 2
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commit `c7118b5`. Macros `es_grv`, `es_circ`, `es_tild`. Hay que comprobar en Windows que «~» (AltGr+4) es tecla muerta; si no lo es, saldría «~ » y se quita el espacio.
 - **Valor:** medio · **Coste:** S
 - **Descripción:** en español, «`», «^», «~» y «¨» son teclas muertas: hay que pulsar espacio después.
   Se crean macros (tecla + espacio) para que salgan de un toque desde la capa SYM. La tilde «´» se
