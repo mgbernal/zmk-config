@@ -306,17 +306,21 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 - **Ficheros:** config/kyria.keymap
 
 ### #17 Avisar al PC de la capa activa (para la chuleta de la lanzadera mma)
-- **Sprint:** 3 · **Estado:** 🟢 PENDIENTE · **Valor:** alto · **Coste:** M
-- **Descripción:** ZMK no le dice al PC qué capa está activa. Para que la lanzadera muestre la chuleta de la capa
-  que se está manteniendo, cada tecla de capa enviará una tecla F que no usa nadie al pulsarse y otra al soltarse
-  (macros con `&macro_press &mo N` + `&macro_tap &kp F1x` / `&macro_pause_for_release` / `&macro_release` + `&kp F19`).
-  Protocolo: F13 = SYM, F14 = NUMS, F15 = TEXT, F16 = ACC, F17 = MOUSE, F18 = HERDR, F19 = vuelta a la base.
-  F20 no se usa porque ya está en TEXT.
+- **Sprint:** 3 · **Estado:** 🟡 EN CURSO. Firmware hecho el 2026-11-13; falta activarlo cuando la lanzadera escuche
+- **Valor:** alto · **Coste:** M
+- **Descripción:** ZMK no le dice al PC qué capa está activa. Ahora las teclas de capa son macros
+  (`ls_sym`, `ls_nums`, `ls_text`, `ls_acc`): `&mo` y, si `SENAL_CAPAS` = 1, un toque de F13 (SYM),
+  F14 (NUMS), F15 (TEXT) o F16 (ACC) al entrar y de F19 al salir. F17 (MOUSE) y F18 (HERDR) quedan
+  reservadas. F20 no se usa porque ya está en TEXT.
+- **Por qué está en 0:** sin un programa que se coma esas teclas, una terminal (herdr-app) podría
+  recibir F13–F19 como secuencias de escape y escribir basura.
 - **Subtareas:**
-  - [ ] Macros de capa para SYM y NUMS (`&mo` normal) y TEXT
-  - [ ] ACC: el hold-tap `acc` necesita un macro con parámetros como binding de hold
-  - [ ] Probar que F13–F19 no hacen nada raro en Teams, herdr-app ni el navegador
-- **Ficheros:** config/kyria.keymap · **Depende de:** que la lanzadera escuche esas teclas
+  - [x] Macros de capa para SYM, NUMS y TEXT
+  - [x] ACC: el hold-tap `acc` usa `ls_acc` como binding de hold
+  - [x] Comprobar con cpp que las dos variantes (0 y 1) expanden bien
+  - [ ] Flashear con 0 y comprobar que las capas funcionan igual que antes
+  - [ ] Cuando la lanzadera escuche y bloquee F13–F19: poner 1, compilar y probar en Teams, herdr-app y el navegador
+- **Ficheros:** config/kyria.keymap · **Depende de:** lanzadera mma
 - **Añadido:** 2026-11-13
 
 ## 📅 Diferido
