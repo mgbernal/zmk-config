@@ -1,7 +1,7 @@
 # zmk-config (Kyria) — Sprint Backlog
 
 **Última actualización:** 2026-11-12
-**Sprint activo:** Sprint 1
+**Sprint activo:** Sprint 1 (pendiente de prueba en el teclado) → Sprint 2
 
 Leyenda: 🟢 PENDIENTE · 🟡 EN CURSO · 🔴 BLOQUEADO · ✅ HECHO
 
@@ -25,11 +25,11 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ## Sprint 1 — Base fiable
 **Objetivo:** que escribir texto normal no falle y que el firmware sea reproducible.
-**Estado sprint:** 0/4 cerrados
+**Estado sprint:** 4/4 cerrados (pendientes de CI y prueba física)
 
 ### #1 Mayúsculas accidentales y espacios perdidos (Espacio/Shift)
 - **Sprint:** 1
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commit `edc6311`. Hold-tap `smt` (balanced, require-prior-idle 125 ms, sin quick-tap) en Espacio, + y º. **Falta probarlo en el teclado** (test plan). Si las mayúsculas tras «. » cuestan, se baja `require-prior-idle-ms`.
 - **Valor:** alto · **Coste:** S
 - **Descripción:** `&mt LSHFT SPACE` usa el modo por defecto `hold-preferred`. Al escribir rápido y
   pulsar la siguiente letra antes de soltar el espacio, ZMK lo toma como Shift: se pierde el espacio
@@ -48,7 +48,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #2 La capa NUMS saca otros operadores con la distribución española
 - **Sprint:** 1
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commit `5c747ef`. `KP_DIVIDE/MULTIPLY/PLUS/MINUS` y `=` como `LS(N0)`. La coma se queda (en Excel español es el separador decimal).
 - **Valor:** alto · **Coste:** S
 - **Descripción:** el teclado numérico de la capa 1 usa códigos US, y con la distribución española
   salen otros caracteres: `SLASH`→«-», `ASTERISK`→«(», `PLUS`→«¿», `MINUS`→«'», `EQUAL`→«¡».
@@ -63,7 +63,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #3 Fijar la versión de ZMK
 - **Sprint:** 1
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commit `d558b1c`. Fijado a `ff09f2d0` (main del 2026-06-07), el ZMK con el que compiló el último firmware bueno (16-jun). Queda pendiente que CI pase tras el push.
 - **Valor:** medio · **Coste:** S
 - **Descripción:** `west.yml` y el workflow apuntan a `main`, así que un cambio en ZMK puede romper la
   compilación sin tocar nada aquí. La v0.3.0 es anterior a la nomenclatura `nice_nano@1//zmk` que
@@ -78,7 +78,7 @@ fila 2 = 24–39 (30–33 son las 4 teclas de pulgar superiores), pulgares = 40�
 
 ### #4 Validación local del keymap
 - **Sprint:** 1
-- **Estado:** 🟢 PENDIENTE
+- **Estado:** ✅ HECHO (2026-11-12) — commits `f9055c5`, `8954b51`, `d558b1c`. `scripts/check_keymap.py` (50 bindings por capa, capas referenciadas, comportamientos, `ES_*`, llaves) y job `check` en CI antes de compilar.
 - **Valor:** medio · **Coste:** S
 - **Descripción:** script que compruebe que cada capa tiene exactamente 50 bindings, que las capas
   referenciadas existen y que las macros `ES_*` están definidas. Así se detectan errores antes de
